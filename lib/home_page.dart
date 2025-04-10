@@ -740,9 +740,9 @@ class _HomePageState extends State<HomePage> {
 class PlaceSearchDelegate extends SearchDelegate<String> {
   final List<String> suggestions;
   final List<Map<String, dynamic>> touristSpots;
-
+  
   PlaceSearchDelegate(this.suggestions, this.touristSpots);
-
+  
   @override
   List<Widget> buildActions(BuildContext context) {
     return [
@@ -754,7 +754,7 @@ class PlaceSearchDelegate extends SearchDelegate<String> {
       ),
     ];
   }
-
+  
   @override
   Widget buildLeading(BuildContext context) {
     return IconButton(
@@ -764,14 +764,26 @@ class PlaceSearchDelegate extends SearchDelegate<String> {
       },
     );
   }
-
+  
   @override
   Widget buildResults(BuildContext context) {
-    final results = touristSpots.where((spot) => 
-      spot['name'].toLowerCase().contains(query.toLowerCase()) || 
+    if (query.isEmpty) {
+      return const Center(
+        child: Text('Please enter a search term'),
+      );
+    }
+    
+    final results = touristSpots.where((spot) =>
+      spot['name'].toLowerCase().contains(query.toLowerCase()) ||
       spot['englishName'].toLowerCase().contains(query.toLowerCase())
     ).toList();
-
+    
+    if (results.isEmpty) {
+      return Center(
+        child: Text('No results found for "$query"'),
+      );
+    }
+    
     return ListView.builder(
       itemCount: results.length,
       itemBuilder: (BuildContext context, int index) {
@@ -817,14 +829,18 @@ class PlaceSearchDelegate extends SearchDelegate<String> {
       },
     );
   }
-
+  
   @override
   Widget buildSuggestions(BuildContext context) {
-    final suggestionList = query.isEmpty
-        ? suggestions
-        : suggestions.where((place) => 
-            place.toLowerCase().contains(query.toLowerCase())).toList();
-
+    if (query.isEmpty) {
+      return const Center(
+        child: Text('Start typing to search in Tamil or English'),
+      );
+    }
+    
+    final suggestionList = suggestions.where((place) =>
+      place.toLowerCase().contains(query.toLowerCase())).toList();
+    
     return ListView.builder(
       itemCount: suggestionList.length,
       itemBuilder: (BuildContext context, int index) {
@@ -842,7 +858,6 @@ class PlaceSearchDelegate extends SearchDelegate<String> {
     );
   }
 }
-
 class ProfilePage extends StatelessWidget {
   final String name;
   final String email;
