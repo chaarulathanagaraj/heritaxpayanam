@@ -11,7 +11,6 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.8
-  webview_flutter: ^4.0.0
   smooth_page_indicator: 1.2.1
   panorama: ^0.4.1
   flutter_tts: ^4.2.2
@@ -25,7 +24,14 @@ dependencies:
   path_provider: ^2.1.1
   path: ^1.8.3
   provider: ^6.0.5
-
+  sqflite_common_ffi: any
+  shared_preferences_web: ^2.1.1
+  sqflite_common_ffi_web: 1.0.0
+  video_player: ^2.8.3
+  chewie: ^1.7.0
+  photo_view: ^0.14.0
+  webview_flutter: ^4.0.7
+  webview_flutter_web: ^0.2.3+4
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -36,3 +42,35 @@ flutter:
   assets:
     - assets/images/
     - assets/panorama/
+    - assets/gallery/thanjavur/gallery1.jpg
+    - assets/gallery/thanjavur/gallery2.jpg
+    - assets/gallery/thanjavur/gallery3.jpg
+    - assets/gallery/thanjavur/gallery4.jpg
+    - assets/gallery/thanjavur/gallery5.jpg
+    - assets/gallery/thanjavur/gallery6.jpg
+
+    - assets/gallery/nilgiri/gallery1.jpg
+    - assets/gallery/nilgiri/gallery2.jpg
+    - assets/gallery/nilgiri/gallery3.jpg
+    - assets/gallery/nilgiri/gallery4.jpg
+    - assets/gallery/nilgiri/gallery5.jpg
+    - assets/gallery/nilgiri/gallery6.jpg
+    - assets/gallery/gangaikonda/gallery1.jpg
+    - assets/gallery/gangaikonda/gallery2.jpg
+    - assets/gallery/gangaikonda/gallery3.jpg
+    - assets/gallery/gangaikonda/gallery4.jpg
+    - assets/gallery/gangaikonda/gallery5.jpg
+    - assets/gallery/gangaikonda/gallery6.jpg
+
+    - assets/gallery/mahabalipuram/gallery1.jpg
+    - assets/gallery/mahabalipuram/gallery2.jpg
+    - assets/gallery/mahabalipuram/gallery3.jpg
+    - assets/gallery/mahabalipuram/gallery4.jpg
+    - assets/gallery/mahabalipuram/gallery5.jpg
+    - assets/gallery/mahabalipuram/gallery6.jpg
+    - assets/gallery/airavatesvara/gallery1.jpg
+    - assets/gallery/airavatesvara/gallery2.jpg
+    - assets/gallery/airavatesvara/gallery3.jpg
+    - assets/gallery/airavatesvara/gallery4.jpg
+    - assets/gallery/airavatesvara/gallery5.jpg
+    - assets/gallery/airavatesvara/gallery6.jpg
