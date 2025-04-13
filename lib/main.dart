@@ -73,14 +73,16 @@ class _LoginPageState extends State<LoginPage> {
         final responseData = jsonDecode(response.body);
 
         if (response.statusCode == 200) {
-          final name = responseData['name'] ?? 'User';
+           final name = responseData['user']['name'];
           final email = _emailController.text;
+          final userId = int.parse(responseData['user']['id'].toString());
 
           Navigator.of(context).pushReplacement(
             MaterialPageRoute(
               builder: (context) => HomePage(
                 name: name,
                 email: email,
+                userId: userId, 
               ),
             ),
           );
