@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'dart:async';
 import 'package:sqflite/sqflite.dart';
-import 'package:path/path.dart' hide context; // Hide Context from path package
+import 'package:path/path.dart' hide context;
+import 'package:video_player/video_player.dart';
+import 'package:chewie/chewie.dart';
+import 'package:photo_view/photo_view.dart';
+import 'package:photo_view/photo_view_gallery.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+import 'dart:io';
+import 'package:flutter/services.dart'; 
 
 class HomePage extends StatefulWidget {
   final String? name;
@@ -32,8 +39,6 @@ class _HomePageState extends State<HomePage> {
   String get name => widget.name ?? "பயனர்";
   String get email => widget.email ?? "guest@example.com";
   
-  List<int> savedPlaceIds = [];
-  
   final List<String> sliderImages = [
     'assets/images/nilgiri_mountain_railway.jpg',
     'assets/images/natarajar.jpg',
@@ -50,8 +55,16 @@ class _HomePageState extends State<HomePage> {
       'englishDescription': 'UNESCO World Heritage Site',
       'location': 'மகாபலிபுரம்',
       'englishLocation': 'Mahabalipuram',
-      'isSaved': false,
       'id': 1,
+      'galleryImages': [
+        'assets/gallery/mahabalipuram/gallery1.jpg',
+        'assets/gallery/mahabalipuram/gallery2.jpg',
+        'assets/gallery/mahabalipuram/gallery3.jpg',
+        'assets/gallery/mahabalipuram/gallery4.jpg',
+        'assets/gallery/mahabalipuram/gallery5.jpg',
+        'assets/gallery/mahabalipuram/gallery6.jpg',
+      ],
+      'videoUrl': 'assets/images/mahabalipuram.mp4',
     },
     {
       'name': 'தஞ்சாவூர் பிரகதீஸ்வரர் கோவில்',
@@ -61,8 +74,16 @@ class _HomePageState extends State<HomePage> {
       'englishDescription': 'Crown jewel of Chola architecture',
       'location': 'தஞ்சாவூர்',
       'englishLocation': 'Thanjavur',
-      'isSaved': false,
       'id': 2,
+       'galleryImages': [
+        'assets/gallery/thanjavur/gallery1.jpg',
+        'assets/gallery/thanjavur/gallery2.jpg',
+        'assets/gallery/thanjavur/gallery3.jpg',
+        'assets/gallery/thanjavur/gallery4.jpg',
+        'assets/gallery/thanjavur/gallery5.jpg',
+        'assets/gallery/thanjavur/gallery6.jpg',
+      ],
+      'videoUrl': 'assets/images/thanjavur.mp4',
     },
     {
       'name': 'கங்கைகொண்ட சோழபுரம்',
@@ -72,8 +93,16 @@ class _HomePageState extends State<HomePage> {
       'englishDescription': 'Second capital of the Chola dynasty',
       'location': 'கங்கைகொண்ட சோழபுரம்',
       'englishLocation': 'Gangaikonda Cholapuram',
-      'isSaved': false,
       'id': 3,
+       'galleryImages': [
+        'assets/gallery/gangaikonda/gallery1.jpg',
+        'assets/gallery/gangaikonda/gallery2.jpg',
+        'assets/gallery/gangaikonda/gallery3.jpg',
+        'assets/gallery/gangaikonda/gallery4.jpg',
+        'assets/gallery/gangaikonda/gallery5.jpg',
+        'assets/gallery/gangaikonda/gallery6.jpg',
+      ],
+      'videoUrl': 'assets/images/gangaikonda.mp4',
     },
     {
       'name': 'நீலகிரி மலை ரயில்',
@@ -83,8 +112,16 @@ class _HomePageState extends State<HomePage> {
       'englishDescription': 'UNESCO World Heritage railway',
       'location': 'ஊட்டி',
       'englishLocation': 'Ooty',
-      'isSaved': false,
       'id': 4,
+      'galleryImages': [
+        'assets/gallery/nilgiri/gallery1.jpg',
+        'assets/gallery/nilgiri/gallery2.jpg',
+        'assets/gallery/nilgiri/gallery3.jpg',
+        'assets/gallery/nilgiri/gallery4.jpg',
+        'assets/gallery/nilgiri/gallery5.jpg',
+        'assets/gallery/nilgiri/gallery6.jpg',
+      ],
+      'videoUrl': 'assets/images/nilgiri.mp4',
     },
     {
       'name': 'ஐராவதேஸ்வரர் கோவில்',
@@ -94,8 +131,16 @@ class _HomePageState extends State<HomePage> {
       'englishDescription': 'Chola era temple of art',
       'location': 'தாராசுரம்',
       'englishLocation': 'Darasuram',
-      'isSaved': false,
       'id': 5,
+      'galleryImages': [
+        'assets/gallery/airavatesvara/gallery1.jpg',
+        'assets/gallery/airavatesvara/gallery2.jpg',
+        'assets/gallery/airavatesvara/gallery3.jpg',
+        'assets/gallery/airavatesvara/gallery4.jpg',
+        'assets/gallery/airavatesvara/gallery5.jpg',
+        'assets/gallery/airavatesvara/gallery6.jpg',
+      ],
+      'videoUrl': 'assets/images/aira.mp4',
     },
   ];
 
@@ -104,7 +149,6 @@ class _HomePageState extends State<HomePage> {
     super.initState();
     _startAutoScroll();
     dbHelper = DatabaseHelper.instance;
-    _loadSavedPlaces();
     _searchController.addListener(() {
       setState(() {
         searchQuery = _searchController.text;
@@ -118,33 +162,6 @@ class _HomePageState extends State<HomePage> {
     _pageController.dispose();
     _searchController.dispose();
     super.dispose();
-  }
-
-  Future<void> _loadSavedPlaces() async {
-    if (widget.userId != null) {
-      final ids = await dbHelper.getSavedPlaceIds(widget.userId!);
-      setState(() {
-        savedPlaceIds = ids;
-      });
-    }
-  }
-
-  Future<void> _toggleSave(int index) async {
-    final placeId = touristSpots[index]['id'];
-    
-    if (widget.userId == null) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Please login to save places')),
-      );
-      return;
-    }
-
-    if (savedPlaceIds.contains(placeId)) {
-      await dbHelper.removeSavedPlace(widget.userId!, placeId);
-    } else {
-      await dbHelper.savePlace(widget.userId!, placeId);
-    }
-    await _loadSavedPlaces();
   }
 
   void _startAutoScroll() {
@@ -183,186 +200,113 @@ class _HomePageState extends State<HomePage> {
     }).toList();
   }
 
-  List<Map<String, dynamic>> get savedPlaces {
-    return touristSpots.where((spot) => savedPlaceIds.contains(spot['id'])).toList();
-  }
-
   List<String> get placeNameSuggestions {
     return touristSpots.map((spot) => spot['name'] as String).toList();
   }
 
-  void _navigateToProfile() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (BuildContext context) => ProfilePage(
-          name: name,
-          email: email,
-          savedPlaces: savedPlaces,
-          onRemoveSavedPlace: (placeId) {
-            setState(() {
-              savedPlaceIds.remove(placeId);
-            });
+ Widget _buildPlaceCard(int index, [Map<String, dynamic>? spot]) {
+  final placeData = spot ?? touristSpots[index];
+  final theme = Theme.of(context);
+  
+  return Card(
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        InkWell(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => PlaceDetailPage(placeData: placeData),
+              ),
+            );
           },
-          userId: widget.userId ?? 0,
-        ),
-      ),
-    );
-  }
-
-  Widget _buildPlaceCard(int index, [Map<String, dynamic>? spot]) {
-    final placeData = spot ?? touristSpots[index];
-    final theme = Theme.of(context);
-    final isSaved = savedPlaceIds.contains(placeData['id']);
-    
-    return Card(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Stack(
-            children: [
-              InkWell(
-                onTap: () {
-                  showDialog(
-                    context: context,
-                    builder: (BuildContext context) => Dialog(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Image.asset(
-                            placeData['image'],
-                            fit: BoxFit.cover,
-                            errorBuilder: (BuildContext context, Object error, StackTrace? stackTrace) => Container(
-                              color: const Color(0xFFF4EFE6),
-                              child: Center(
-                                child: Icon(Icons.image_not_supported, 
-                                          size: 40, 
-                                          color: theme.colorScheme.secondary),
-                              ),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Text(
-                              placeData['name'],
-                              style: const TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.bold,
-                                fontFamily: 'Tamil',
-                              ),
-                            ),
-                          ),
-                          TextButton(
-                            onPressed: () => Navigator.pop(context),
-                            child: const Text('மூடு', style: TextStyle(fontFamily: 'Tamil')),
-                          ),
-                        ],
+          child: ClipRRect(
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+            child: AspectRatio(
+              aspectRatio: 1.2,
+              child: placeData['image'].startsWith('http')
+                ? Image.network(
+                    placeData['image'],
+                    fit: BoxFit.cover,
+                    errorBuilder: (BuildContext context, Object error, StackTrace? stackTrace) => Container(
+                      color: const Color(0xFFF4EFE6),
+                      child: Center(
+                        child: Icon(
+                          Icons.image_not_supported,
+                          size: 40,
+                          color: theme.colorScheme.secondary
+                        ),
                       ),
                     ),
-                  );
-                },
-                child: ClipRRect(
-                  borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
-                  child: AspectRatio(
-                    aspectRatio: 1.2,
-                    child: placeData['image'].startsWith('http')
-                        ? Image.network(
-                            placeData['image'],
-                            fit: BoxFit.cover,
-                            errorBuilder: (BuildContext context, Object error, StackTrace? stackTrace) => Container(
-                              color: const Color(0xFFF4EFE6),
-                              child: Center(
-                                child: Icon(Icons.image_not_supported, 
-                                          size: 40, 
-                                          color: theme.colorScheme.secondary),
-                              ),
-                            ),
-                          )
-                        : Image.asset(
-                            placeData['image'],
-                            fit: BoxFit.cover,
-                            errorBuilder: (BuildContext context, Object error, StackTrace? stackTrace) => Container(
-                              color: const Color(0xFFF4EFE6),
-                              child: Center(
-                                child: Icon(Icons.image_not_supported, 
-                                          size: 40, 
-                                          color: theme.colorScheme.secondary),
-                              ),
-                            ),
-                          ),
+                  )
+                : Image.asset(
+                    placeData['image'],
+                    fit: BoxFit.cover,
+                    errorBuilder: (BuildContext context, Object error, StackTrace? stackTrace) => Container(
+                      color: const Color(0xFFF4EFE6),
+                      child: Center(
+                        child: Icon(
+                          Icons.image_not_supported,
+                          size: 40,
+                          color: theme.colorScheme.secondary
+                        ),
+                      ),
+                    ),
                   ),
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                placeData['name'],
+                style: TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                  color: theme.colorScheme.onSurface,
+                  fontFamily: 'Tamil',
+                ),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+              const SizedBox(height: 2),
+              Text(
+                placeData['englishName'] ?? '',
+                style: TextStyle(
+                  fontSize: 12,
+                  fontStyle: FontStyle.italic,
+                  color: theme.colorScheme.onSurface.withOpacity(0.7),
+                ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
+              const SizedBox(height: 4),
+              Text(
+                placeData['location'] ?? '',
+                style: TextStyle(
+                  fontSize: 12,
+                  color: theme.colorScheme.secondary,
+                  fontFamily: 'Tamil',
                 ),
               ),
-              Positioned(
-                top: 8,
-                right: 8,
-                child: GestureDetector(
-                  onTap: () => _toggleSave(index),
-                  child: Container(
-                    padding: const EdgeInsets.all(4),
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.8),
-                      shape: BoxShape.circle,
-                    ),
-                    child: Icon(
-                      isSaved ? Icons.bookmark : Icons.bookmark_border,
-                      color: theme.colorScheme.primary,
-                    ),
-                  ),
+              Text(
+                placeData['englishLocation'] ?? '',
+                style: TextStyle(
+                  fontSize: 11,
+                  color: theme.colorScheme.secondary.withOpacity(0.8),
                 ),
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  placeData['name'],
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                    color: theme.colorScheme.onSurface,
-                    fontFamily: 'Tamil',
-                  ),
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                const SizedBox(height: 2),
-                Text(
-                  placeData['englishName'] ?? '',
-                  style: TextStyle(
-                    fontSize: 12,
-                    fontStyle: FontStyle.italic,
-                    color: theme.colorScheme.onSurface.withOpacity(0.7),
-                  ),
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                const SizedBox(height: 4),
-                Text(
-                  placeData['location'] ?? '',
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: theme.colorScheme.secondary,
-                    fontFamily: 'Tamil',
-                  ),
-                ),
-                Text(
-                  placeData['englishLocation'] ?? '',
-                  style: TextStyle(
-                    fontSize: 11,
-                    color: theme.colorScheme.secondary.withOpacity(0.8),
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
+        ),
+      ],
+    ),
+  );
+}
 
   @override
   Widget build(BuildContext context) {
@@ -396,13 +340,10 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       Row(
                         children: [
-                          GestureDetector(
-                            onTap: _navigateToProfile,
-                            child: CircleAvatar(
-                              radius: 22,
-                              backgroundColor: colorScheme.secondary,
-                              child: const Icon(Icons.person, color: Colors.white, size: 28),
-                            ),
+                          CircleAvatar(
+                            radius: 22,
+                            backgroundColor: colorScheme.secondary,
+                            child: const Icon(Icons.person, color: Colors.white, size: 28),
                           ),
                           const SizedBox(width: 12),
                           Column(
@@ -805,23 +746,11 @@ class PlaceSearchDelegate extends SearchDelegate<String> {
           ),
           subtitle: Text(spot['englishName']),
           onTap: () {
+            close(context, spot['name']); // Close the search interface
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (BuildContext context) => Scaffold(
-                  appBar: AppBar(
-                    title: Text(
-                      spot['name'],
-                      style: const TextStyle(fontFamily: 'Tamil'),
-                    ),
-                  ),
-                  body: Center(
-                    child: Image.asset(
-                      spot['image'],
-                      errorBuilder: (BuildContext context, Object error, StackTrace? stackTrace) => const Icon(Icons.image),
-                    ),
-                  ),
-                ),
+                builder: (context) => PlaceDetailPage(placeData: spot),
               ),
             );
           },
@@ -858,225 +787,143 @@ class PlaceSearchDelegate extends SearchDelegate<String> {
     );
   }
 }
-class ProfilePage extends StatelessWidget {
-  final String name;
-  final String email;
-  final List<Map<String, dynamic>> savedPlaces;
-  final Function(int) onRemoveSavedPlace;
-  final int userId;
+     class PlaceDetailPage extends StatelessWidget {
+  final Map<String, dynamic> placeData;
 
-  const ProfilePage({
-    Key? key,
-    required this.name,
-    required this.email,
-    required this.savedPlaces,
-    required this.onRemoveSavedPlace,
-    required this.userId,
-  }) : super(key: key);
+  const PlaceDetailPage({Key? key, required this.placeData}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
-    final dbHelper = DatabaseHelper.instance;
 
     return Scaffold(
-      backgroundColor: colorScheme.background,
       appBar: AppBar(
-        backgroundColor: theme.colorScheme.secondary,
         title: Text(
-          'உங்கள் சுயவிவரம்',
-          style: TextStyle(
-            color: Colors.white,
+          placeData['name'],
+          style: const TextStyle(
             fontFamily: 'Tamil',
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
           ),
         ),
+        backgroundColor: theme.colorScheme.secondary,
       ),
       body: SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
-              padding: const EdgeInsets.all(24),
-              color: colorScheme.surface,
-              child: Row(
-                children: [
-                  CircleAvatar(
-                    radius: 40,
-                    backgroundColor: colorScheme.secondary,
-                    child: Text(
-                      name.isNotEmpty ? name[0].toUpperCase() : "?",
-                      style: const TextStyle(
-                        fontSize: 36,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 20),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          name,
-                          style: TextStyle(
-                            fontSize: 24,
-                            fontWeight: FontWeight.bold,
-                            color: colorScheme.onSurface,
-                          ),
-                        ),
-                        const SizedBox(height: 4),
-                        Text(
-                          email,
-                          style: TextStyle(
-                            fontSize: 16,
-                            color: colorScheme.onSurface.withOpacity(0.7),
-                          ),
-                        ),
-                        const SizedBox(height: 8),
-                        Row(
-                          children: [
-                            Icon(Icons.bookmark, size: 16, color: colorScheme.primary),
-                            const SizedBox(width: 8),
-                            Text(
-                              '${savedPlaces.length} சேமித்த இடங்கள்',
-                              style: TextStyle(
-                                fontSize: 14,
-                                color: colorScheme.primary,
-                                fontFamily: 'Tamil',
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            
+            // Image section removed as requested
             Padding(
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'சேமித்த இடங்கள்',
+                    placeData['name'],
                     style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 24,
                       fontWeight: FontWeight.bold,
-                      color: colorScheme.onBackground,
+                      color: colorScheme.primary,
                       fontFamily: 'Tamil',
                     ),
                   ),
-                  const SizedBox(height: 4),
                   Text(
-                    'Saved Places',
+                    placeData['englishName'],
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontStyle: FontStyle.italic,
+                      color: colorScheme.onSurface.withOpacity(0.8),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  Row(
+                    children: [
+                      Icon(Icons.location_on, color: colorScheme.secondary, size: 18),
+                      const SizedBox(width: 4),
+                      Text(
+                        '${placeData['location']} (${placeData['englishLocation']})',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: colorScheme.secondary,
+                          fontFamily: 'Tamil',
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 16),
+                  Text(
+                    placeData['description'],
                     style: TextStyle(
                       fontSize: 16,
-                      color: colorScheme.onBackground.withOpacity(0.7),
+                      color: colorScheme.onSurface,
+                      fontFamily: 'Tamil',
+                    ),
+                  ),
+                  Text(
+                    placeData['englishDescription'],
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: colorScheme.onSurface.withOpacity(0.8),
+                    ),
+                  ),
+                  const SizedBox(height: 24),
+                  Text(
+                    'எங்களுடன் சுற்றுலா செல்லுங்கள்',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: colorScheme.primary,
+                      fontFamily: 'Tamil',
+                    ),
+                  ),
+                  Text(
+                    'Explore With Us',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontStyle: FontStyle.italic,
+                      color: colorScheme.onSurface.withOpacity(0.8),
                     ),
                   ),
                   const SizedBox(height: 16),
-                  
-                  savedPlaces.isEmpty
-                  ? Center(
-                      child: Padding(
-                        padding: const EdgeInsets.all(32),
-                        child: Column(
-                          children: [
-                            Icon(
-                              Icons.bookmark_border,
-                              size: 64,
-                              color: colorScheme.onSurface.withOpacity(0.3),
-                            ),
-                            const SizedBox(height: 16),
-                            Text(
-                              'No saved places yet',
-                              style: TextStyle(
-                                fontSize: 18,
-                                color: colorScheme.onSurface.withOpacity(0.5),
-                              ),
-                              textAlign: TextAlign.center,
-                            ),
-                          ],
-                        ),
-                      ),
-                    )
-                  : ListView.builder(
-                      shrinkWrap: true,
-                      physics: const NeverScrollableScrollPhysics(),
-                      itemCount: savedPlaces.length,
-                      itemBuilder: (BuildContext context, int index) {
-                        final place = savedPlaces[index];
-                        return Card(
-                          margin: const EdgeInsets.only(bottom: 12),
-                          child: ListTile(
-                            leading: ClipRRect(
-                              borderRadius: BorderRadius.circular(4),
-                              child: Image.asset(
-                                place['image'],
-                                width: 60,
-                                height: 60,
-                                fit: BoxFit.cover,
-                                errorBuilder: (BuildContext context, Object error, StackTrace? stackTrace) => Container(
-                                  width: 60,
-                                  height: 60,
-                                  color: const Color(0xFFF4EFE6),
-                                  child: Icon(
-                                    Icons.image_not_supported,
-                                    size: 24,
-                                    color: colorScheme.secondary,
-                                  ),
-                                ),
-                              ),
-                            ),
-                            title: Text(
-                              place['name'],
-                              style: TextStyle(
-                                fontFamily: 'Tamil',
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            subtitle: Text(
-                              place['englishName'],
-                              style: const TextStyle(fontSize: 12),
-                            ),
-                            trailing: IconButton(
-                              icon: const Icon(Icons.delete),
-                              color: Colors.red,
-                              onPressed: () async {
-                                await dbHelper.removeSavedPlace(userId, place['id']);
-                                onRemoveSavedPlace(place['id']);
-                              },
-                            ),
-                            onTap: () {
-                              showDialog(
-                                context: context,
-                                builder: (BuildContext context) => Dialog(
-                                  child: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Image.asset(
-                                        place['image'],
-                                        fit: BoxFit.cover,
-                                        errorBuilder: (BuildContext context, Object error, StackTrace? stackTrace) => const Icon(Icons.image),
-                                      ),
-                                      TextButton(
-                                        onPressed: () => Navigator.pop(context),
-                                        child: const Text('மூடு', style: TextStyle(fontFamily: 'Tamil')),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              );
-                            },
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+
+                      _buildExploreOption(
+                        context, 
+                        Icons.photo_library, 
+                        'படத்தொகுப்பு', 
+                        'Gallery',
+                        () => Navigator.push(
+                          context, 
+                          MaterialPageRoute(
+                            builder: (context) => GalleryPage(
+  images: placeData['galleryImages'] ?? [],
+  placeName: placeData['name'],
+),
                           ),
-                        );
-                      },
-                    ),
+                        ),
+                        colorScheme,
+                      ),
+                      _buildExploreOption(
+                        context, 
+                        Icons.play_circle_fill, 
+                        'காணொளி', 
+                        'Video',
+                        () => Navigator.push(
+                          context, 
+                          MaterialPageRoute(
+                           builder: (context) => VideoPlayerPage(
+  videoUrl: placeData['videoUrl'] ?? '',
+  placeName: placeData['name'],
+),
+                          ),
+                        ),
+                        colorScheme,
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
@@ -1085,8 +932,60 @@ class ProfilePage extends StatelessWidget {
       ),
     );
   }
+  
+  Widget _buildExploreOption(
+    BuildContext context, 
+    IconData icon, 
+    String tamilText, 
+    String englishText, 
+    VoidCallback onTap,
+    ColorScheme colorScheme,
+  ) {
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(12),
+      child: Container(
+        width: 100,
+        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
+        decoration: BoxDecoration(
+          color: colorScheme.surface,
+          borderRadius: BorderRadius.circular(12),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.1),
+              blurRadius: 4,
+              offset: const Offset(0, 2),
+            ),
+          ],
+        ),
+        child: Column(
+          children: [
+            Icon(icon, color: colorScheme.primary, size: 32),
+            const SizedBox(height: 8),
+            Text(
+              tamilText,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+                color: colorScheme.onSurface,
+                fontFamily: 'Tamil',
+              ),
+            ),
+            Text(
+              englishText,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 11,
+                color: colorScheme.onSurface.withOpacity(0.7),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
-
 class DatabaseHelper {
   static final DatabaseHelper instance = DatabaseHelper._init();
   static Database? _database;
@@ -1128,49 +1027,285 @@ class DatabaseHelper {
         english_location TEXT NOT NULL
       )
     ''');
-
-    await db.execute('''
-      CREATE TABLE saved_places (
-        user_id INTEGER,
-        place_id INTEGER,
-        PRIMARY KEY (user_id, place_id),
-        FOREIGN KEY (user_id) REFERENCES users(id),
-        FOREIGN KEY (place_id) REFERENCES places(place_id)
-      )
-    ''');
-  }
-
-  Future<void> savePlace(int userId, int placeId) async {
-    final db = await instance.database;
-    await db.insert(
-      'saved_places',
-      {'user_id': userId, 'place_id': placeId},
-      conflictAlgorithm: ConflictAlgorithm.ignore,
-    );
-  }
-
-  Future<void> removeSavedPlace(int userId, int placeId) async {
-    final db = await instance.database;
-    await db.delete(
-      'saved_places',
-      where: 'user_id = ? AND place_id = ?',
-      whereArgs: [userId, placeId],
-    );
-  }
-
-  Future<List<int>> getSavedPlaceIds(int userId) async {
-    final db = await instance.database;
-    final result = await db.query(
-      'saved_places',
-      columns: ['place_id'],
-      where: 'user_id = ?',
-      whereArgs: [userId],
-    );
-    return result.map((e) => e['place_id'] as int).toList();
   }
 
   Future close() async {
     final db = await instance.database;
     db.close();
+  }
+}
+class GalleryPage extends StatelessWidget {
+  final List<String> images;
+  final String placeName;
+  
+  const GalleryPage({
+    Key? key, 
+    required this.images, 
+    required this.placeName,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+    
+    // Debug print to check the images list
+    debugPrint('Gallery images: $images');
+    
+    if (images.isEmpty) {
+      return Scaffold(
+        appBar: AppBar(
+          title: Text(
+            '$placeName - Gallery',
+            style: const TextStyle(
+              fontFamily: 'Tamil',
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+          backgroundColor: colorScheme.secondary,
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Icon(Icons.photo_library_outlined, size: 72, color: Colors.grey),
+              const SizedBox(height: 16),
+              Text(
+                'No images available',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: colorScheme.onSurface,
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+    
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        title: Text(
+          '$placeName - Gallery',
+          style: const TextStyle(
+            fontFamily: 'Tamil',
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
+        backgroundColor: Colors.black.withOpacity(0.7),
+        iconTheme: const IconThemeData(color: Colors.white),
+      ),
+      body: PhotoViewGallery.builder(
+        scrollPhysics: const BouncingScrollPhysics(),
+        builder: (BuildContext context, int index) {
+          final imagePath = images[index];
+          debugPrint('Loading image at index $index: $imagePath');
+          
+          return PhotoViewGalleryPageOptions(
+            imageProvider: AssetImage(imagePath),
+            initialScale: PhotoViewComputedScale.contained,
+            minScale: PhotoViewComputedScale.contained,
+            maxScale: PhotoViewComputedScale.covered * 2,
+            errorBuilder: (context, error, stackTrace) {
+              debugPrint('Error loading image $imagePath: $error');
+              return Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Icon(Icons.broken_image, size: 50, color: Colors.grey),
+                    const SizedBox(height: 10),
+                    Text(
+                      'Failed to load image',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    Text(
+                      'Index: $index',
+                      style: TextStyle(color: Colors.white70),
+                    ),
+                  ],
+                ),
+              );
+            },
+          );
+        },
+        itemCount: images.length,
+        loadingBuilder: (context, event) => Center(
+          child: SizedBox(
+            width: 50,
+            height: 50,
+            child: CircularProgressIndicator(
+              value: event == null
+                  ? 0
+                  : event.cumulativeBytesLoaded / (event.expectedTotalBytes ?? 1),
+              color: colorScheme.primary,
+            ),
+          ),
+        ),
+        backgroundDecoration: const BoxDecoration(color: Colors.black),
+      ),
+    );
+  }
+}
+class VideoPlayerPage extends StatefulWidget {
+  final String videoUrl;
+  final String placeName;
+  
+  const VideoPlayerPage({
+    Key? key, 
+    required this.videoUrl, 
+    required this.placeName,
+  }) : super(key: key);
+
+  @override
+  State<VideoPlayerPage> createState() => _VideoPlayerPageState();
+}
+
+class _VideoPlayerPageState extends State<VideoPlayerPage> {
+  late VideoPlayerController videoPlayerController;
+  ChewieController? chewieController;
+  bool isLoading = true;
+  String? errorMessage;
+  
+  @override
+  void initState() {
+    super.initState();
+    // Force landscape orientation for fullscreen video
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.landscapeRight,
+    ]);
+    _initializePlayer();
+  }
+  
+  Future<void> _initializePlayer() async {
+    try {
+      if (widget.videoUrl.isEmpty) {
+        setState(() {
+          errorMessage = 'Video URL is not available';
+          isLoading = false;
+        });
+        return;
+      }
+      
+      // Check if the URL is a network URL or an asset
+      if (widget.videoUrl.startsWith('http')) {
+        videoPlayerController = VideoPlayerController.network(widget.videoUrl);
+      } else {
+        videoPlayerController = VideoPlayerController.asset(widget.videoUrl);
+      }
+      
+      await videoPlayerController.initialize();
+      
+      chewieController = ChewieController(
+        videoPlayerController: videoPlayerController,
+        autoPlay: true,
+        looping: false,
+        allowFullScreen: true,
+        allowMuting: true,
+        deviceOrientationsAfterFullScreen: [
+          DeviceOrientation.landscapeLeft,
+          DeviceOrientation.landscapeRight,
+        ],
+        // Always use full screen mode
+        fullScreenByDefault: true,
+        // Use the video's actual aspect ratio instead of constraining it
+        aspectRatio: videoPlayerController.value.aspectRatio,
+        // Add controls overlay
+        showControls: true,
+        // Make controls always visible briefly when video starts
+        showControlsOnInitialize: true,
+        errorBuilder: (context, errorMessage) {
+          return Center(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Text(
+                errorMessage,
+                style: const TextStyle(color: Colors.white),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          );
+        },
+      );
+      
+      setState(() {
+        isLoading = false;
+      });
+    } catch (e) {
+      setState(() {
+        errorMessage = 'Error loading video: $e';
+        isLoading = false;
+      });
+    }
+  }
+  
+  @override
+  void dispose() {
+    // Reset orientation when leaving the page
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+    videoPlayerController.dispose();
+    chewieController?.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+    
+    // Make app full immersive for video playback
+    SystemChrome.setEnabledSystemUIMode(
+      SystemUiMode.immersiveSticky,
+      overlays: [],
+    );
+    
+    return Scaffold(
+      // Hide app bar for full screen video experience
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+      ),
+      backgroundColor: Colors.black,
+      body: Center(
+        child: isLoading
+            ? CircularProgressIndicator(color: colorScheme.primary)
+            : errorMessage != null
+                ? Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Icon(Icons.error_outline, size: 72, color: Colors.grey),
+                      const SizedBox(height: 16),
+                      Text(
+                        errorMessage!,
+                        style: const TextStyle(
+                          fontSize: 16,
+                          color: Colors.white,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      ElevatedButton(
+                        onPressed: () => Navigator.of(context).pop(),
+                        child: const Text('Go Back'),
+                      ),
+                    ],
+                  )
+                : SizedBox.expand(
+                    child: Chewie(
+                      controller: chewieController!,
+                    ),
+                  ),
+      ),
+    );
   }
 }
