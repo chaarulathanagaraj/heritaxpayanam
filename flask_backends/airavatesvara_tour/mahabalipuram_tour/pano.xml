@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour start="node2" apprev="17950" appversion="6.1.6" title="MAMALLAPURAM" author="&quot;The Group of Monuments&quot;">
+  <panorama id="node2" hideabout="1">
+    <input prev2url="images/01-SHORE TEMPLE_01_o_preview_2.jpg" tilesize="2048" tile1url="images/01-SHORE TEMPLE_01_o_1.jpg" tile2url="images/01-SHORE TEMPLE_01_o_2.jpg" prev3url="images/01-SHORE TEMPLE_01_o_preview_3.jpg" levelingpitch="0" tile4url="images/01-SHORE TEMPLE_01_o_4.jpg" tilescale="1.004883" levelingroll="-1" tile0url="images/01-SHORE TEMPLE_01_o_0.jpg" tile5url="images/01-SHORE TEMPLE_01_o_5.jpg" prev0url="images/01-SHORE TEMPLE_01_o_preview_0.jpg" tile3url="images/01-SHORE TEMPLE_01_o_3.jpg" prev5url="images/01-SHORE TEMPLE_01_o_preview_5.jpg" prev4url="images/01-SHORE TEMPLE_01_o_preview_4.jpg" tilevrurl="images/01-SHORE TEMPLE_01_ovr.jpg" prev1url="images/01-SHORE TEMPLE_01_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="0" projection="4"/>
+      <flyin tilt="0" fov="80" pan="3" projection="4"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="28-07-2020 09:56" source="" comment="" info="" nodeid="node2" author="" description="Mamallapuram - UNESCO - World Heritage Site" longitude="" copyright="A. Suresh Babu" title="Shore Temple" tags="Pano2VR6|tourpreview" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-17.27" distance="10" url="{node3}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="Miniature Shrine" pan="-333.09" target="87.2/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-17.01" distance="10" url="{node21}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point03" title="Arjuna's Penance" pan="-95.61" target="0.0/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-14.86" distance="10" url="{node1}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point04" title="Backside view - Shore Temple" pan="-281.65" target="0.0/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-13.45" url="{node34}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Logo of Mamallapuram" pan="-30.95" target="-54.4/0.0/80.0" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/shore-temple-01.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node34" hideabout="1">
+    <input prev2url="images/SHORE TEMPLE_04_o_preview_2.jpg" tilesize="2048" tile1url="images/SHORE TEMPLE_04_o_1.jpg" tile2url="images/SHORE TEMPLE_04_o_2.jpg" prev3url="images/SHORE TEMPLE_04_o_preview_3.jpg" levelingpitch="0" tile4url="images/SHORE TEMPLE_04_o_4.jpg" tilescale="1.004883" levelingroll="-1" tile0url="images/SHORE TEMPLE_04_o_0.jpg" tile5url="images/SHORE TEMPLE_04_o_5.jpg" prev0url="images/SHORE TEMPLE_04_o_preview_0.jpg" tile3url="images/SHORE TEMPLE_04_o_3.jpg" prev5url="images/SHORE TEMPLE_04_o_preview_5.jpg" prev4url="images/SHORE TEMPLE_04_o_preview_4.jpg" tilevrurl="images/SHORE TEMPLE_04_ovr.jpg" prev1url="images/SHORE TEMPLE_04_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="-54.44" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="28-07-2020 13:42" source="" comment="" info="" nodeid="node34" author="" description="" longitude="" copyright="" title="Logo of Mamallapuram" tags="Pano2VR6" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-18.35" distance="10" url="{node2}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="Shore Temple" pan="-283.16" target="7.6/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-19.75" distance="10" url="{node4}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Prakara" pan="-122.64" target="1.1/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-32.98" distance="10" url="{node3}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point03" title="Miniature Shrine" pan="-3.3" target="46.3/1.2/80.0" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/shore-temple-02.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node3" hideabout="1">
+    <input prev2url="images/02-SHORE TEMPLE_02_o_preview_2.jpg" tilesize="2048" tile1url="images/02-SHORE TEMPLE_02_o_1.jpg" tile2url="images/02-SHORE TEMPLE_02_o_2.jpg" prev3url="images/02-SHORE TEMPLE_02_o_preview_3.jpg" levelingpitch="1" tile4url="images/02-SHORE TEMPLE_02_o_4.jpg" tilescale="1.004883" levelingroll="0" tile0url="images/02-SHORE TEMPLE_02_o_0.jpg" tile5url="images/02-SHORE TEMPLE_02_o_5.jpg" prev0url="images/02-SHORE TEMPLE_02_o_preview_0.jpg" tile3url="images/02-SHORE TEMPLE_02_o_3.jpg" prev5url="images/02-SHORE TEMPLE_02_o_preview_5.jpg" prev4url="images/02-SHORE TEMPLE_02_o_preview_4.jpg" tilevrurl="images/02-SHORE TEMPLE_02_ovr.jpg" prev1url="images/02-SHORE TEMPLE_02_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="3" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="28-07-2020 13:48" source="" comment="" info="" nodeid="node3" author="" description="" longitude="" copyright="" title="Miniature Shrine" tags="Pano2VR6" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-16.9" distance="10" url="{node2}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Shore Temple" pan="-79.6" target="-96.8/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-14.71" distance="10" url="{node1}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point03" title="Backside view - Shore Temple" pan="-217.11" target="1.7/-0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-35.47" distance="10" url="{node34}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="Logo of Mamallapuram" pan="-358.44" target="-54.4/0.0/80.0" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/shore-temple-03.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node4" hideabout="1">
+    <input prev2url="images/03-SHORE TEMPLE_19_o_preview_2.jpg" tilesize="2048" tile1url="images/03-SHORE TEMPLE_19_o_1.jpg" tile2url="images/03-SHORE TEMPLE_19_o_2.jpg" prev3url="images/03-SHORE TEMPLE_19_o_preview_3.jpg" levelingpitch="0" tile4url="images/03-SHORE TEMPLE_19_o_4.jpg" tilescale="1.004883" levelingroll="0" tile0url="images/03-SHORE TEMPLE_19_o_0.jpg" tile5url="images/03-SHORE TEMPLE_19_o_5.jpg" prev0url="images/03-SHORE TEMPLE_19_o_preview_0.jpg" tile3url="images/03-SHORE TEMPLE_19_o_3.jpg" prev5url="images/03-SHORE TEMPLE_19_o_preview_5.jpg" prev4url="images/03-SHORE TEMPLE_19_o_preview_4.jpg" tilevrurl="images/03-SHORE TEMPLE_19_ovr.jpg" prev1url="images/03-SHORE TEMPLE_19_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="1.14" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="28-07-2020 13:40" source="" comment="" info="" nodeid="node4" author="" description="" longitude="" copyright="" title="Prakara" tags="Pano2VR6" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-12.78" distance="10" url="{node5}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="Front view of Shore Temple" pan="-1.03" target="0.0/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-14.59" distance="10" url="{node2}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Shore Temple" pan="-259.15" target="4.0/0.4/80.0" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/shore-temple-04.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node5" hideabout="1">
+    <input prev2url="images/04-SHORE TEMPLE_17_o_preview_2.jpg" tilesize="2048" tile1url="images/04-SHORE TEMPLE_17_o_1.jpg" tile2url="images/04-SHORE TEMPLE_17_o_2.jpg" prev3url="images/04-SHORE TEMPLE_17_o_preview_3.jpg" levelingpitch="0" tile4url="images/04-SHORE TEMPLE_17_o_4.jpg" tilescale="1.004883" levelingroll="0" tile0url="images/04-SHORE TEMPLE_17_o_0.jpg" tile5url="images/04-SHORE TEMPLE_17_o_5.jpg" prev0url="images/04-SHORE TEMPLE_17_o_preview_0.jpg" tile3url="images/04-SHORE TEMPLE_17_o_3.jpg" prev5url="images/04-SHORE TEMPLE_17_o_preview_5.jpg" prev4url="images/04-SHORE TEMPLE_17_o_preview_4.jpg" tilevrurl="images/04-SHORE TEMPLE_17_ovr.jpg" prev1url="images/04-SHORE TEMPLE_17_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="0" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="17-09-2021 07:56" source="" comment="" info="" nodeid="node5" author="A.SURESH BABU" description="" longitude="" copyright="A.SURESH BABU" title="Front view of Shore Temple" tags="Pano2VR6" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-21.23" distance="10" url="{node6}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="Inside the sanctum" pan="-0.2" target="0.0/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-21.06" distance="10" url="{node4}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Prakara" pan="-234.53" target="90.0/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-15.96" distance="10" url="{node7}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point03" title="Open Air Hall" pan="-180.3" target="" customimagewidth="128"/>
+      <hotspot tilt="-13.43" distance="10" url="{node8}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point04" title="Miniature Durga Temple" pan="-47.44" target="2.2/-0.4/80.0" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/shore-temple-05.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node6" hideabout="1">
+    <input prev2url="images/05-SHORE TEMPLE_13_o_preview_2.jpg" tilesize="2048" tile1url="images/05-SHORE TEMPLE_13_o_1.jpg" tile2url="images/05-SHORE TEMPLE_13_o_2.jpg" prev3url="images/05-SHORE TEMPLE_13_o_preview_3.jpg" levelingpitch="0" tile4url="images/05-SHORE TEMPLE_13_o_4.jpg" tilescale="1.004883" levelingroll="0" tile0url="images/05-SHORE TEMPLE_13_o_0.jpg" tile5url="images/05-SHORE TEMPLE_13_o_5.jpg" prev0url="images/05-SHORE TEMPLE_13_o_preview_0.jpg" tile3url="images/05-SHORE TEMPLE_13_o_3.jpg" prev5url="images/05-SHORE TEMPLE_13_o_preview_5.jpg" prev4url="images/05-SHORE TEMPLE_13_o_preview_4.jpg" tilevrurl="images/05-SHORE TEMPLE_13_ovr.jpg" prev1url="images/05-SHORE TEMPLE_13_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="0" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="28-07-2020 12:02" source="" comment="" info="" nodeid="node6" author="" description="" longitude="" copyright="" title="Inside the sanctum" tags="Pano2VR6" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-24.35" distance="10" url="{node5}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="Front view of Shore Temple" pan="-179.27" target="179.3/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-34.88" distance="10" url="{node8}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Miniature Durga Temple" pan="-148.95" target="1.4/0.0/80.0" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/shore-temple-06.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node7" hideabout="1">
+    <input prev2url="images/06-SHORE TEMPLE_18_o_preview_2.jpg" tilesize="2048" tile1url="images/06-SHORE TEMPLE_18_o_1.jpg" tile2url="images/06-SHORE TEMPLE_18_o_2.jpg" prev3url="images/06-SHORE TEMPLE_18_o_preview_3.jpg" levelingpitch="0" tile4url="images/06-SHORE TEMPLE_18_o_4.jpg" tilescale="1.004883" levelingroll="1" tile0url="images/06-SHORE TEMPLE_18_o_0.jpg" tile5url="images/06-SHORE TEMPLE_18_o_5.jpg" prev0url="images/06-SHORE TEMPLE_18_o_preview_0.jpg" tile3url="images/06-SHORE TEMPLE_18_o_3.jpg" prev5url="images/06-SHORE TEMPLE_18_o_preview_5.jpg" prev4url="images/06-SHORE TEMPLE_18_o_preview_4.jpg" tilevrurl="images/06-SHORE TEMPLE_18_ovr.jpg" prev1url="images/06-SHORE TEMPLE_18_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="0" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="17-09-2021 07:54" source="" comment="" info="" nodeid="node7" author="A.SURESH BABU" description="" longitude="" copyright="A.SURESH BABU" title="Open Air Hall" tags="Pano2VR6" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-14.73" distance="10" url="{node9}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="Western Entrance" pan="-178.28" target="-1.7/-0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-17.44" distance="10" url="{node5}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Front view of Shore Temple" pan="-358.75" target="0.0/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-9.99" distance="10" url="{node4}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point03" title="Prakara" pan="-304.24" target="90.0/0.0/80.0" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/shore-temple-07.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node8" hideabout="1">
+    <input prev2url="images/07-SHORE TEMPLE_15_o_preview_2.jpg" tilesize="2048" tile1url="images/07-SHORE TEMPLE_15_o_1.jpg" tile2url="images/07-SHORE TEMPLE_15_o_2.jpg" prev3url="images/07-SHORE TEMPLE_15_o_preview_3.jpg" levelingpitch="0" tile4url="images/07-SHORE TEMPLE_15_o_4.jpg" tilescale="1.004883" levelingroll="0" tile0url="images/07-SHORE TEMPLE_15_o_0.jpg" tile5url="images/07-SHORE TEMPLE_15_o_5.jpg" prev0url="images/07-SHORE TEMPLE_15_o_preview_0.jpg" tile3url="images/07-SHORE TEMPLE_15_o_3.jpg" prev5url="images/07-SHORE TEMPLE_15_o_preview_5.jpg" prev4url="images/07-SHORE TEMPLE_15_o_preview_4.jpg" tilevrurl="images/07-SHORE TEMPLE_15_ovr.jpg" prev1url="images/07-SHORE TEMPLE_15_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="1.4" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="28-07-2020 13:20" source="" comment="" info="" nodeid="node8" author="" description="" longitude="" copyright="" title="Miniature Durga Temple" tags="Pano2VR6" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-14.27" distance="10" url="{node5}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="Front view of Shore Temple" pan="-259.98" target="0.0/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-10.16" distance="10" url="{node1}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Backside view - Shore Temple" pan="-345.09" target="0.0/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-16.65" distance="10" url="{node7}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point03" title="Open Air Hall" pan="-185.99" target="0.0/0.0/80.0" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/shore-temple-08.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node9" hideabout="1">
+    <input prev2url="images/08-SHORE TEMPLE_20_o_preview_2.jpg" tilesize="2048" tile1url="images/08-SHORE TEMPLE_20_o_1.jpg" tile2url="images/08-SHORE TEMPLE_20_o_2.jpg" prev3url="images/08-SHORE TEMPLE_20_o_preview_3.jpg" levelingpitch="0" tile4url="images/08-SHORE TEMPLE_20_o_4.jpg" tilescale="1.004883" levelingroll="-1" tile0url="images/08-SHORE TEMPLE_20_o_0.jpg" tile5url="images/08-SHORE TEMPLE_20_o_5.jpg" prev0url="images/08-SHORE TEMPLE_20_o_preview_0.jpg" tile3url="images/08-SHORE TEMPLE_20_o_3.jpg" prev5url="images/08-SHORE TEMPLE_20_o_preview_5.jpg" prev4url="images/08-SHORE TEMPLE_20_o_preview_4.jpg" tilevrurl="images/08-SHORE TEMPLE_20_ovr.jpg" prev1url="images/08-SHORE TEMPLE_20_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="0" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="28-07-2020 16:31" source="" comment="" info="" nodeid="node9" author="" description="" longitude="" copyright="" title="Western Entrance" tags="Pano2VR6" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-8.21" distance="10" url="{node7}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="Open Air Hall" pan="-4.88" target="0.0/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-14.57" distance="10" url="{node21}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Arjuna's Penance" pan="-206.84" target="0.0/0.0/80.0" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/shore-temple-09.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node1" hideabout="1">
+    <input prev2url="images/09-SHORE TEMPLE_21_o_preview_2.jpg" tilesize="2048" tile1url="images/09-SHORE TEMPLE_21_o_1.jpg" tile2url="images/09-SHORE TEMPLE_21_o_2.jpg" prev3url="images/09-SHORE TEMPLE_21_o_preview_3.jpg" levelingpitch="0" tile4url="images/09-SHORE TEMPLE_21_o_4.jpg" tilescale="1.004883" levelingroll="0" tile0url="images/09-SHORE TEMPLE_21_o_0.jpg" tile5url="images/09-SHORE TEMPLE_21_o_5.jpg" prev0url="images/09-SHORE TEMPLE_21_o_preview_0.jpg" tile3url="images/09-SHORE TEMPLE_21_o_3.jpg" prev5url="images/09-SHORE TEMPLE_21_o_preview_5.jpg" prev4url="images/09-SHORE TEMPLE_21_o_preview_4.jpg" tilevrurl="images/09-SHORE TEMPLE_21_ovr.jpg" prev1url="images/09-SHORE TEMPLE_21_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="0" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="28-07-2020 13:06" source="" comment="" info="" nodeid="node1" author="" description="" longitude="" copyright="" title="Backside view - Shore Temple" tags="Pano2VR6" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-11.66" distance="10" url="{node8}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="Miniature Durga Temple" pan="-315.29" target="" customimagewidth="128"/>
+      <hotspot tilt="-7.09" distance="10" url="{node3}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Miniature Shrine" pan="-51.79" target="" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/shore-temple-10.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node11" hideabout="1">
+    <input prev2url="images/10-5RATHAS_02_o_preview_2.jpg" tilesize="2048" tile1url="images/10-5RATHAS_02_o_1.jpg" tile2url="images/10-5RATHAS_02_o_2.jpg" prev3url="images/10-5RATHAS_02_o_preview_3.jpg" levelingpitch="0" tile4url="images/10-5RATHAS_02_o_4.jpg" tilescale="1.004883" levelingroll="0" tile0url="images/10-5RATHAS_02_o_0.jpg" tile5url="images/10-5RATHAS_02_o_5.jpg" prev0url="images/10-5RATHAS_02_o_preview_0.jpg" tile3url="images/10-5RATHAS_02_o_3.jpg" prev5url="images/10-5RATHAS_02_o_preview_5.jpg" prev4url="images/10-5RATHAS_02_o_preview_4.jpg" tilevrurl="images/10-5RATHAS_02_ovr.jpg" prev1url="images/10-5RATHAS_02_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="27.8" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="15-09-2021 06:51" source="" comment="" info="" nodeid="node11" author="A.SURESH BABU" description="" longitude="" copyright="A.SURESH BABU" title="FIVE(5) RATHAS" tags="Pano2VR6" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-19.3" distance="10" url="{node12}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="Draupati Ratha" pan="-323.03" target="0.0/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-15.56" url="{node21}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Arjuna's Penance" pan="-173.2" target="0.0/0.0/80.0" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/5-rathas-01.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node12" hideabout="1">
+    <input prev2url="images/11-5RATHAS_03_o_preview_2.jpg" tilesize="2048" tile1url="images/11-5RATHAS_03_o_1.jpg" tile2url="images/11-5RATHAS_03_o_2.jpg" prev3url="images/11-5RATHAS_03_o_preview_3.jpg" levelingpitch="0" tile4url="images/11-5RATHAS_03_o_4.jpg" tilescale="1.004883" levelingroll="0" tile0url="images/11-5RATHAS_03_o_0.jpg" tile5url="images/11-5RATHAS_03_o_5.jpg" prev0url="images/11-5RATHAS_03_o_preview_0.jpg" tile3url="images/11-5RATHAS_03_o_3.jpg" prev5url="images/11-5RATHAS_03_o_preview_5.jpg" prev4url="images/11-5RATHAS_03_o_preview_4.jpg" tilevrurl="images/11-5RATHAS_03_ovr.jpg" prev1url="images/11-5RATHAS_03_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="0" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="15-09-2021 06:54" source="" comment="" info="" nodeid="node12" author="A.SURESH BABU" description="" longitude="" copyright="A.SURESH BABU" title="Draupati Ratha" tags="Pano2VR6" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-20.5" distance="10" url="{node11}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="FIVE(5) RATHAS" pan="-213.47" target="-172.6/-0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-19.14" distance="10" url="{node13}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Arjuna Ratha" pan="-94.19" target="0.0/0.0/80.0" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/5-rathas-02.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node13" hideabout="1">
+    <input prev2url="images/12-5RATHAS_08_o_preview_2.jpg" tilesize="2048" tile1url="images/12-5RATHAS_08_o_1.jpg" tile2url="images/12-5RATHAS_08_o_2.jpg" prev3url="images/12-5RATHAS_08_o_preview_3.jpg" levelingpitch="0" tile4url="images/12-5RATHAS_08_o_4.jpg" tilescale="1.004883" levelingroll="0" tile0url="images/12-5RATHAS_08_o_0.jpg" tile5url="images/12-5RATHAS_08_o_5.jpg" prev0url="images/12-5RATHAS_08_o_preview_0.jpg" tile3url="images/12-5RATHAS_08_o_3.jpg" prev5url="images/12-5RATHAS_08_o_preview_5.jpg" prev4url="images/12-5RATHAS_08_o_preview_4.jpg" tilevrurl="images/12-5RATHAS_08_ovr.jpg" prev1url="images/12-5RATHAS_08_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="0" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="15-09-2021 07:11" source="" comment="" info="" nodeid="node13" author="A.SURESH BABU; A.SURESH BABU" description="" longitude="" copyright="A.SURESH BABU" title="Arjuna Ratha" tags="Pano2VR6" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-18.6" distance="10" url="{node12}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="Draupati Ratha" pan="-279.4" target="103.9/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-19.73" distance="10" url="{node14}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Monolithic Elephant" pan="-71.28" target="0.0/0.0/80.0" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/5-rathas-03.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node14" hideabout="1">
+    <input prev2url="images/13-5RATHAS_07_o_preview_2.jpg" tilesize="2048" tile1url="images/13-5RATHAS_07_o_1.jpg" tile2url="images/13-5RATHAS_07_o_2.jpg" prev3url="images/13-5RATHAS_07_o_preview_3.jpg" levelingpitch="0" tile4url="images/13-5RATHAS_07_o_4.jpg" tilescale="1.004883" levelingroll="0" tile0url="images/13-5RATHAS_07_o_0.jpg" tile5url="images/13-5RATHAS_07_o_5.jpg" prev0url="images/13-5RATHAS_07_o_preview_0.jpg" tile3url="images/13-5RATHAS_07_o_3.jpg" prev5url="images/13-5RATHAS_07_o_preview_5.jpg" prev4url="images/13-5RATHAS_07_o_preview_4.jpg" tilevrurl="images/13-5RATHAS_07_ovr.jpg" prev1url="images/13-5RATHAS_07_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="0" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="15-09-2021 07:10" source="" comment="" info="" nodeid="node14" author="A.SURESH BABU" description="" longitude="" copyright="A.SURESH BABU" title="Monolithic Elephant" tags="Pano2VR6" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-26.01" distance="10" url="{node13}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="Arjuna Ratha" pan="-67.81" target="88.9/-0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-13.31" distance="10" url="{node15}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Nakula &amp; Sahadeva Ratha" pan="-319.97" target="0.0/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-11.14" distance="10" url="{node16}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point03" title="Bheema Ratha" pan="-279.74" target="0.0/0.0/80.0" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/5-rathas-04.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node15" hideabout="1">
+    <input prev2url="images/14-RATHAS_10_o_preview_2.jpg" tilesize="2048" tile1url="images/14-RATHAS_10_o_1.jpg" tile2url="images/14-RATHAS_10_o_2.jpg" prev3url="images/14-RATHAS_10_o_preview_3.jpg" levelingpitch="0" tile4url="images/14-RATHAS_10_o_4.jpg" tilescale="1.004883" levelingroll="0" tile0url="images/14-RATHAS_10_o_0.jpg" tile5url="images/14-RATHAS_10_o_5.jpg" prev0url="images/14-RATHAS_10_o_preview_0.jpg" tile3url="images/14-RATHAS_10_o_3.jpg" prev5url="images/14-RATHAS_10_o_preview_5.jpg" prev4url="images/14-RATHAS_10_o_preview_4.jpg" tilevrurl="images/14-RATHAS_10_ovr.jpg" prev1url="images/14-RATHAS_10_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="0" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="15-09-2021 07:25" source="" comment="" info="" nodeid="node15" author="A.SURESH BABU" description="" longitude="" copyright="A.SURESH BABU" title="Nakula &amp; Sahadeva Ratha" tags="Pano2VR6" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-17" distance="10" url="{node14}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="Monolithic Elephant" pan="-68.1" target="-78.7/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-18.08" distance="10" url="{node16}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Bheema Ratha" pan="-137.71" target="0.0/0.0/80.0" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/5-rathas-05.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node16" hideabout="1">
+    <input prev2url="images/15-5RATHAS_11_o_preview_2.jpg" tilesize="2048" tile1url="images/15-5RATHAS_11_o_1.jpg" tile2url="images/15-5RATHAS_11_o_2.jpg" prev3url="images/15-5RATHAS_11_o_preview_3.jpg" levelingpitch="0" tile4url="images/15-5RATHAS_11_o_4.jpg" tilescale="1.004883" levelingroll="0" tile0url="images/15-5RATHAS_11_o_0.jpg" tile5url="images/15-5RATHAS_11_o_5.jpg" prev0url="images/15-5RATHAS_11_o_preview_0.jpg" tile3url="images/15-5RATHAS_11_o_3.jpg" prev5url="images/15-5RATHAS_11_o_preview_5.jpg" prev4url="images/15-5RATHAS_11_o_preview_4.jpg" tilevrurl="images/15-5RATHAS_11_ovr.jpg" prev1url="images/15-5RATHAS_11_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="0" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="15-09-2021 07:27" source="" comment="" info="" nodeid="node16" author="A.SURESH BABU" description="" longitude="" copyright="A.SURESH BABU" title="Bheema Ratha" tags="Pano2VR6" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-14.56" url="{node15}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="Nakula &amp; Sahadeva Ratha" pan="-250.7" target="" customimagewidth="128"/>
+      <hotspot tilt="-11.72" url="{node14}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Monolithic Elephant" pan="-297.18" target="" customimagewidth="128"/>
+      <hotspot tilt="-15.82" distance="10" url="{node17}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point03" title="Dharmaraja Ratha" pan="-85.44" target="0.0/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-8.92" distance="10" url="{node10}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point04" title="Panoramic View - Five Rathas" pan="-107.08" target="47.8/0.0/80.0" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/5-rathas-06.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node17" hideabout="1">
+    <input prev2url="images/16-5RATHAS_17_o_preview_2.jpg" tilesize="2048" tile1url="images/16-5RATHAS_17_o_1.jpg" tile2url="images/16-5RATHAS_17_o_2.jpg" prev3url="images/16-5RATHAS_17_o_preview_3.jpg" levelingpitch="0" tile4url="images/16-5RATHAS_17_o_4.jpg" tilescale="1.004883" levelingroll="0" tile0url="images/16-5RATHAS_17_o_0.jpg" tile5url="images/16-5RATHAS_17_o_5.jpg" prev0url="images/16-5RATHAS_17_o_preview_0.jpg" tile3url="images/16-5RATHAS_17_o_3.jpg" prev5url="images/16-5RATHAS_17_o_preview_5.jpg" prev4url="images/16-5RATHAS_17_o_preview_4.jpg" tilevrurl="images/16-5RATHAS_17_ovr.jpg" prev1url="images/16-5RATHAS_17_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="0" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="15-09-2021 07:55" source="" comment="" info="" nodeid="node17" author="A.SURESH BABU" description="" longitude="" copyright="A.SURESH BABU" title="Dharmaraja Ratha" tags="Pano2VR6" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-12.58" distance="10" url="{node16}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="Bheema Ratha" pan="-283.72" target="79.0/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-10" distance="10" url="{node10}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Panoramic View - Five Rathas" pan="-222.89" target="46.5/0.0/80.0" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/5-rathas-07.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node10" hideabout="1">
+    <input prev2url="images/17-5RATHAS_18_o_preview_2.jpg" tilesize="2048" tile1url="images/17-5RATHAS_18_o_1.jpg" tile2url="images/17-5RATHAS_18_o_2.jpg" prev3url="images/17-5RATHAS_18_o_preview_3.jpg" levelingpitch="0" tile4url="images/17-5RATHAS_18_o_4.jpg" tilescale="1.004883" levelingroll="0" tile0url="images/17-5RATHAS_18_o_0.jpg" tile5url="images/17-5RATHAS_18_o_5.jpg" prev0url="images/17-5RATHAS_18_o_preview_0.jpg" tile3url="images/17-5RATHAS_18_o_3.jpg" prev5url="images/17-5RATHAS_18_o_preview_5.jpg" prev4url="images/17-5RATHAS_18_o_preview_4.jpg" tilevrurl="images/17-5RATHAS_18_ovr.jpg" prev1url="images/17-5RATHAS_18_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="42" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="15-09-2021 07:59" source="" comment="" info="" nodeid="node10" author="A.SURESH BABU" description="" longitude="" copyright="A.SURESH BABU" title="Panoramic View - Five Rathas" tags="Pano2VR6" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-20.32" distance="10" url="{node17}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="Dharmaraja Ratha" pan="-25.44" target="0.0/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-13.63" distance="10" url="{node16}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Bheema Ratha" pan="-283.3" target="52.9/0.0/80.0" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/5-rathas-08.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node21" hideabout="1">
+    <input prev2url="images/20-HILLOCK_02_o_preview_2.jpg" tilesize="2048" tile1url="images/20-HILLOCK_02_o_1.jpg" tile2url="images/20-HILLOCK_02_o_2.jpg" prev3url="images/20-HILLOCK_02_o_preview_3.jpg" levelingpitch="0" tile4url="images/20-HILLOCK_02_o_4.jpg" tilescale="1.004883" levelingroll="0" tile0url="images/20-HILLOCK_02_o_0.jpg" tile5url="images/20-HILLOCK_02_o_5.jpg" prev0url="images/20-HILLOCK_02_o_preview_0.jpg" tile3url="images/20-HILLOCK_02_o_3.jpg" prev5url="images/20-HILLOCK_02_o_preview_5.jpg" prev4url="images/20-HILLOCK_02_o_preview_4.jpg" tilevrurl="images/20-HILLOCK_02_ovr.jpg" prev1url="images/20-HILLOCK_02_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="0" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="16-09-2021 06:44" source="" comment="" info="" nodeid="node21" author="A.SURESH BABU" description="" longitude="" copyright="A.SURESH BABU" title="Arjuna's Penance" tags="Pano2VR6" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-23.22" distance="10" url="{node33}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Closer view - Arjuna Penance" pan="-2.01" target="0.0/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-12.65" distance="10" url="{node2}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point04" title="Shore Temple" pan="-172.64" target="8.1/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-20.88" distance="10" url="{node11}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="FIVE(5) RATHAS" pan="-275.48" target="27.8/0.0/80.0" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/arjuna-penance-01.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <panorama id="node33" hideabout="1">
+    <input prev2url="images/20a-HILLOCK_01_o_preview_2.jpg" tilesize="2048" tile1url="images/20a-HILLOCK_01_o_1.jpg" tile2url="images/20a-HILLOCK_01_o_2.jpg" prev3url="images/20a-HILLOCK_01_o_preview_3.jpg" levelingpitch="0" tile4url="images/20a-HILLOCK_01_o_4.jpg" tilescale="1.004883" levelingroll="0" tile0url="images/20a-HILLOCK_01_o_0.jpg" tile5url="images/20a-HILLOCK_01_o_5.jpg" prev0url="images/20a-HILLOCK_01_o_preview_0.jpg" tile3url="images/20a-HILLOCK_01_o_3.jpg" prev5url="images/20a-HILLOCK_01_o_preview_5.jpg" prev4url="images/20a-HILLOCK_01_o_preview_4.jpg" tilevrurl="images/20a-HILLOCK_01_ovr.jpg" prev1url="images/20a-HILLOCK_01_o_preview_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start tilt="0" fov="80" pan="0" projection="4"/>
+      <flyin tilt="-90" fov="170" pan="0" projection="9"/>
+      <min fovpixel="2" tilt="-90" pan="0"/>
+      <max tilt="90" fov="120" fovfisheye="360" scaletofit="1" pan="360" fovstereographic="270"/>
+    </view>
+    <userdata datetime="16-09-2021 06:42" source="" comment="" info="" nodeid="node33" author="A.SURESH BABU" description="" longitude="" copyright="A.SURESH BABU" title="Closer view - Arjuna Penance" tags="Pano2VR6" latitude="" heading="0" customnodeid=""/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label bordercolor="0x000000" borderalpha="1" borderradius="1" enabled="1" height="20" backgroundalpha="1" backgroundcolor="0xffffff" textcolor="0x000000" border="1" background="1" textalpha="1" width="180" wordwrap="1"/>
+      <polystyle bordercolor="0x0000ff" borderalpha="1" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" handcursor="1"/>
+      <hotspot tilt="-20.73" distance="10" url="{node21}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point02" title="Arjuna's Penance" pan="-176.45" target="-173.0/0.0/80.0" customimagewidth="128"/>
+      <hotspot tilt="-11.64" distance="10" url="{node11}" customimageheight="112" skinid="ht_node" customimage="media/hotspot.png" use3D="1" distance3D="1465.84" description="" fov="5" id="Point01" title="FIVE(5) RATHAS" pan="-267.05" target="27.8/0.0/80.0" customimagewidth="128"/>
+    </hotspots>
+    <media>
+      <sound tilt="-1.000" startmutedmobile="0" tiltsize="10.000" loop="1" mode="0" nodechangekeep="0" id="_background" level="1.000" pan="-1.000" pansize="10.000" field="90.000" ambientlevel="0.000">
+        <source url="media/arjuna-penance-02.mp3"/>
+      </sound>
+    </media>
+    <transition zoomout="0" zoomspeed="2" enabled="1" zoomoutpause="1" zoomfov="20" blendcolor="0x000000" blendtime="1" zoomin="0" type="crossdissolve" softedge="0"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control contextprojections="0" sensitivity="8" rubberband="0" lockedwheel="0" simulatemass="1" invertcontrol="1" speedwheel="1" dblclickfullscreen="0" lockedkeyboard="0" lockedkeyboardzoom="0" lockedmouse="0" invertwheel="0" hideabout="1" contextfullscreen="1"/>
+  </panorama>
+  <masternode>
+    <userdata datetime="" source="" comment="" info="" nodeid="master" author="" description="" longitude="" copyright="" title="" tags="" latitude="" heading="0" customnodeid=""/>
+  </masternode>
+</tour>

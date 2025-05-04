@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour start="node1" appversion="6.1.6" apprev="17950" title="DARASURAM" author="&quot;Airavateswara Temple&quot;" >
+  <panorama id="node1" hideabout="1">
+    <input tilesize="2048" levelingroll="0" prev1url="images/05a_o_preview_1.jpg" tilevrurl="images/05a_ovr.jpg" tilescale="1.004883" tile3url="images/05a_o_3.jpg" prev5url="images/05a_o_preview_5.jpg" levelingpitch="0" prev3url="images/05a_o_preview_3.jpg" tile4url="images/05a_o_4.jpg" tile0url="images/05a_o_0.jpg" tile2url="images/05a_o_2.jpg" prev0url="images/05a_o_preview_0.jpg" prev2url="images/05a_o_preview_2.jpg" tile5url="images/05a_o_5.jpg" prev4url="images/05a_o_preview_4.jpg" tile1url="images/05a_o_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start pan="-1.16" fov="80" tilt="0" projection="4"/>
+      <flyin pan="0" fov="170" tilt="-90" projection="9"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max fovstereographic="270" fovfisheye="360" scaletofit="1" pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata description="" datetime="23-08-2021 06:50" info="" customnodeid="" copyright="A SURESH BABU" comment="" longitude="" author="&quot;Airavateswara Temple&quot;" tags="tourpreview" nodeid="node1" title="AIRAVATESWARA TEMPLE" latitude="" source="" heading="0"/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label backgroundalpha="1" border="1" borderradius="1" enabled="1" background="1" width="180" wordwrap="1" backgroundcolor="0xffffff" borderalpha="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" height="20"/>
+      <polystyle backgroundalpha="0.25098" mode="0" handcursor="1" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff"/>
+      <hotspot description="" pan="-304.06" customimage="media/hotspot.png" skinid="ht_node" target="0.0/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" id="Point01" url="{node2}" customimagewidth="128" title="Entrance" use3D="1" tilt="-16.99"/>
+    </hotspots>
+    <media>
+      <sound mode="0" startmutedmobile="0" pan="-1.000" pansize="10.000" ambientlevel="0.000" tiltsize="10.000" loop="1" id="_background" nodechangekeep="0" level="1.000" tilt="-1.000" field="90.000">
+        <source url="media/Dharasuram-01.mp3"/>
+      </sound>
+    </media>
+    <transition softedge="0" zoomfov="20" blendcolor="0x000000" enabled="1" zoomout="0" type="crossdissolve" zoomspeed="2" blendtime="1" zoomin="0" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control lockedkeyboard="0" dblclickfullscreen="0" simulatemass="1" speedwheel="1" rubberband="0" invertwheel="0" lockedkeyboardzoom="0" lockedwheel="0" contextprojections="0" invertcontrol="1" sensitivity="8" hideabout="1" contextfullscreen="1" lockedmouse="0"/>
+  </panorama>
+  <panorama id="node2" hideabout="1">
+    <input tilesize="2048" levelingroll="0" prev1url="images/09a_o_preview_1.jpg" tilevrurl="images/09a_ovr.jpg" tilescale="1.004883" tile3url="images/09a_o_3.jpg" prev5url="images/09a_o_preview_5.jpg" levelingpitch="0" prev3url="images/09a_o_preview_3.jpg" tile4url="images/09a_o_4.jpg" tile0url="images/09a_o_0.jpg" tile2url="images/09a_o_2.jpg" prev0url="images/09a_o_preview_0.jpg" prev2url="images/09a_o_preview_2.jpg" tile5url="images/09a_o_5.jpg" prev4url="images/09a_o_preview_4.jpg" tile1url="images/09a_o_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start pan="0" fov="80" tilt="0" projection="4"/>
+      <flyin pan="0" fov="170" tilt="-90" projection="9"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max fovstereographic="270" fovfisheye="360" scaletofit="1" pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata description="" datetime="23-08-2021 07:30" info="" customnodeid="" copyright="A SURESH BABU" comment="" longitude="" author="A SURESH BABU" tags="Pano2VR6" nodeid="node2" title="Entrance" latitude="" source="" heading="0"/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label backgroundalpha="1" border="1" borderradius="1" enabled="1" background="1" width="180" wordwrap="1" backgroundcolor="0xffffff" borderalpha="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" height="20"/>
+      <polystyle backgroundalpha="0.25098" mode="0" handcursor="1" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff"/>
+      <hotspot description="" pan="-272.29" customimage="media/hotspot.png" skinid="ht_node" target="0.8/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" distance="10" id="Point01" url="{node3}" customimagewidth="128" title="Panoramic View" use3D="1" tilt="-17.78"/>
+      <hotspot description="" pan="-178.74" customimage="media/hotspot.png" skinid="ht_node" target="-91.5/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" distance="5" id="Point02" url="{node1}" customimagewidth="128" title="AIRAVATESWARA TEMPLE" use3D="1" tilt="-24.41"/>
+      <hotspot description="" pan="-86.07" customimage="media/hotspot.png" skinid="ht_node" target="-45.0/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" id="Point03" url="{node10}" customimagewidth="128" title="North Side View" use3D="1" tilt="-18.66"/>
+    </hotspots>
+    <media>
+      <sound mode="0" startmutedmobile="0" pan="-1.000" pansize="10.000" ambientlevel="0.000" tiltsize="10.000" loop="1" id="_background" nodechangekeep="0" level="1.000" tilt="-1.000" field="90.000">
+        <source url="media/Dharasuram-02.mp3"/>
+      </sound>
+    </media>
+    <transition softedge="0" zoomfov="20" blendcolor="0x000000" enabled="1" zoomout="0" type="crossdissolve" zoomspeed="2" blendtime="1" zoomin="0" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control lockedkeyboard="0" dblclickfullscreen="0" simulatemass="1" speedwheel="1" rubberband="0" invertwheel="0" lockedkeyboardzoom="0" lockedwheel="0" contextprojections="0" invertcontrol="1" sensitivity="8" hideabout="1" contextfullscreen="1" lockedmouse="0"/>
+  </panorama>
+  <panorama id="node3" hideabout="1">
+    <input tilesize="2048" levelingroll="-1" prev1url="images/11a_o_preview_1.jpg" tilevrurl="images/11a_ovr.jpg" tilescale="1.004883" tile3url="images/11a_o_3.jpg" prev5url="images/11a_o_preview_5.jpg" levelingpitch="0" prev3url="images/11a_o_preview_3.jpg" tile4url="images/11a_o_4.jpg" tile0url="images/11a_o_0.jpg" tile2url="images/11a_o_2.jpg" prev0url="images/11a_o_preview_0.jpg" prev2url="images/11a_o_preview_2.jpg" tile5url="images/11a_o_5.jpg" prev4url="images/11a_o_preview_4.jpg" tile1url="images/11a_o_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start pan="0.76" fov="80" tilt="0" projection="4"/>
+      <flyin pan="0" fov="170" tilt="-90" projection="9"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max fovstereographic="270" fovfisheye="360" scaletofit="1" pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata description="" datetime="23-08-2021 07:34" info="" customnodeid="" copyright="A SURESH BABU" comment="" longitude="" author="A SURESH BABU" tags="Pano2VR6" nodeid="node3" title="Panoramic View" latitude="" source="" heading="0"/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label backgroundalpha="1" border="1" borderradius="1" enabled="1" background="1" width="180" wordwrap="1" backgroundcolor="0xffffff" borderalpha="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" height="20"/>
+      <polystyle backgroundalpha="0.25098" mode="0" handcursor="1" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff"/>
+      <hotspot description="" pan="-88.96" customimage="media/hotspot.png" skinid="ht_node" target="-90.9/-3.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" distance="10" id="Point01" url="{node2}" customimagewidth="128" title="Entrance" use3D="1" tilt="-20.16"/>
+      <hotspot description="" pan="-26.58" customimage="media/hotspot.png" skinid="ht_node" target="0.0/0.0/80" customimageheight="112" fov="5" distance3D="1465.84" distance="10" id="Point02" url="{node11}" customimagewidth="128" title="In Front of Steps" use3D="1" tilt="-18.46"/>
+    </hotspots>
+    <media>
+      <sound mode="0" startmutedmobile="0" pan="-1.000" pansize="10.000" ambientlevel="0.000" tiltsize="10.000" loop="1" id="_background" nodechangekeep="0" level="1.000" tilt="-1.000" field="90.000">
+        <source url="media/Dharasuram-03.mp3"/>
+      </sound>
+    </media>
+    <transition softedge="0" zoomfov="20" blendcolor="0x000000" enabled="1" zoomout="0" type="crossdissolve" zoomspeed="2" blendtime="1" zoomin="0" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control lockedkeyboard="0" dblclickfullscreen="0" simulatemass="1" speedwheel="1" rubberband="0" invertwheel="0" lockedkeyboardzoom="0" lockedwheel="0" contextprojections="0" invertcontrol="1" sensitivity="8" hideabout="1" contextfullscreen="1" lockedmouse="0"/>
+  </panorama>
+  <panorama id="node11" hideabout="1">
+    <input tilesize="2048" levelingroll="-1" prev1url="images/13a_o_preview_1.jpg" tilevrurl="images/13a_ovr.jpg" tilescale="1.004883" tile3url="images/13a_o_3.jpg" prev5url="images/13a_o_preview_5.jpg" levelingpitch="0" prev3url="images/13a_o_preview_3.jpg" tile4url="images/13a_o_4.jpg" tile0url="images/13a_o_0.jpg" tile2url="images/13a_o_2.jpg" prev0url="images/13a_o_preview_0.jpg" prev2url="images/13a_o_preview_2.jpg" tile5url="images/13a_o_5.jpg" prev4url="images/13a_o_preview_4.jpg" tile1url="images/13a_o_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start pan="0" fov="70" tilt="0" projection="4"/>
+      <flyin pan="0" fov="170" tilt="-90" projection="9"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max fovstereographic="270" fovfisheye="360" scaletofit="1" pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata description="" datetime="23-08-2021 07:38" info="" customnodeid="" copyright="A SURESH BABU" comment="" longitude="" author="A SURESH BABU" tags="Pano2VR6" nodeid="node11" title="In Front of Steps" latitude="" source="" heading="0"/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label backgroundalpha="1" border="1" borderradius="1" enabled="1" background="1" width="180" wordwrap="1" backgroundcolor="0xffffff" borderalpha="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" height="20"/>
+      <polystyle backgroundalpha="0.25098" mode="0" handcursor="1" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff"/>
+      <hotspot description="" pan="-273.83" customimage="media/hotspot.png" skinid="ht_node" target="0.0/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" distance="10" id="Point01" url="{node5}" customimagewidth="128" title="Yazhi Pillars" use3D="1" tilt="-34.1"/>
+      <hotspot description="" pan="-109.39" customimage="media/hotspot.png" skinid="ht_node" target="-90/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" distance="10" id="Point02" url="{node3}" customimagewidth="128" title="Panoramic View" use3D="1" tilt="-22.04"/>
+      <hotspot description="" pan="-227.22" customimage="media/hotspot.png" skinid="ht_node" target="0.0/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" distance="10" id="Point03" url="{node4}" customimagewidth="128" title="Horse Chariot (East)" use3D="1" tilt="-24.71"/>
+      <hotspot description="" pan="-57.34" customimage="media/hotspot.png" skinid="ht_node" target="180/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" distance="10" id="Point04" url="{node2}" customimagewidth="128" title="Entrance" use3D="1" tilt="-25.4"/>
+    </hotspots>
+    <media>
+      <sound mode="0" startmutedmobile="0" pan="-1.000" pansize="10.000" ambientlevel="0.000" tiltsize="10.000" loop="1" id="_background" nodechangekeep="0" level="1.000" tilt="-1.000" field="90.000">
+        <source url="media/Dharasuram-04.mp3"/>
+      </sound>
+    </media>
+    <transition softedge="0" zoomfov="20" blendcolor="0x000000" enabled="1" zoomout="0" type="crossdissolve" zoomspeed="2" blendtime="1" zoomin="0" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control lockedkeyboard="0" dblclickfullscreen="0" simulatemass="1" speedwheel="1" rubberband="0" invertwheel="0" lockedkeyboardzoom="0" lockedwheel="0" contextprojections="0" invertcontrol="1" sensitivity="8" hideabout="1" contextfullscreen="1" lockedmouse="0"/>
+  </panorama>
+  <panorama id="node4" hideabout="1">
+    <input tilesize="2048" levelingroll="0" prev1url="images/12a_o_preview_1.jpg" tilevrurl="images/12a_ovr.jpg" tilescale="1.004883" tile3url="images/12a_o_3.jpg" prev5url="images/12a_o_preview_5.jpg" levelingpitch="0" prev3url="images/12a_o_preview_3.jpg" tile4url="images/12a_o_4.jpg" tile0url="images/12a_o_0.jpg" tile2url="images/12a_o_2.jpg" prev0url="images/12a_o_preview_0.jpg" prev2url="images/12a_o_preview_2.jpg" tile5url="images/12a_o_5.jpg" prev4url="images/12a_o_preview_4.jpg" tile1url="images/12a_o_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start pan="0" fov="80" tilt="0" projection="4"/>
+      <flyin pan="0" fov="170" tilt="-90" projection="9"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max fovstereographic="270" fovfisheye="360" scaletofit="1" pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata description="" datetime="23-08-2021 07:37" info="" customnodeid="" copyright="A SURESH BABU" comment="" longitude="" author="A SURESH BABU" tags="Pano2VR6" nodeid="node4" title="Horse Chariot (East)" latitude="" source="" heading="0"/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label backgroundalpha="1" border="1" borderradius="1" enabled="1" background="1" width="180" wordwrap="1" backgroundcolor="0xffffff" borderalpha="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" height="20"/>
+      <polystyle backgroundalpha="0.25098" mode="0" handcursor="1" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff"/>
+      <hotspot description="" pan="-127.18" customimage="media/hotspot.png" skinid="ht_node" target="88.4/0/70.0" customimageheight="112" fov="5" distance3D="1465.84" distance="10" id="Point01" url="{node11}" customimagewidth="128" title="In Front of Steps" use3D="1" tilt="-23.83"/>
+      <hotspot description="" pan="-184.38" customimage="media/hotspot.png" skinid="ht_node" target="-91.1/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" distance="10" id="Point02" url="{node3}" customimagewidth="128" title="Panoramic View" use3D="1" tilt="-22.14"/>
+    </hotspots>
+    <media>
+      <sound mode="0" startmutedmobile="0" pan="-1.000" pansize="10.000" ambientlevel="0.000" tiltsize="10.000" loop="1" id="_background" nodechangekeep="0" level="1.000" tilt="-1.000" field="90.000">
+        <source url="media/Dharasuram-05.mp3"/>
+      </sound>
+    </media>
+    <transition softedge="0" zoomfov="20" blendcolor="0x000000" enabled="1" zoomout="0" type="crossdissolve" zoomspeed="2" blendtime="1" zoomin="0" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control lockedkeyboard="0" dblclickfullscreen="0" simulatemass="1" speedwheel="1" rubberband="0" invertwheel="0" lockedkeyboardzoom="0" lockedwheel="0" contextprojections="0" invertcontrol="1" sensitivity="8" hideabout="1" contextfullscreen="1" lockedmouse="0"/>
+  </panorama>
+  <panorama id="node5" hideabout="1">
+    <input tilesize="2048" levelingroll="0" prev1url="images/16a_o_preview_1.jpg" tilevrurl="images/16a_ovr.jpg" tilescale="1.004883" tile3url="images/16a_o_3.jpg" prev5url="images/16a_o_preview_5.jpg" levelingpitch="0" prev3url="images/16a_o_preview_3.jpg" tile4url="images/16a_o_4.jpg" tile0url="images/16a_o_0.jpg" tile2url="images/16a_o_2.jpg" prev0url="images/16a_o_preview_0.jpg" prev2url="images/16a_o_preview_2.jpg" tile5url="images/16a_o_5.jpg" prev4url="images/16a_o_preview_4.jpg" tile1url="images/16a_o_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start pan="0" fov="80" tilt="0" projection="4"/>
+      <flyin pan="0" fov="170" tilt="-90" projection="9"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max fovstereographic="270" fovfisheye="360" scaletofit="1" pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata description="" datetime="23-08-2021 07:44" info="" customnodeid="" copyright="A SURESH BABU" comment="" longitude="" author="A SURESH BABU" tags="Pano2VR6" nodeid="node5" title="Yazhi Pillars" latitude="" source="" heading="0"/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label backgroundalpha="1" border="1" borderradius="1" enabled="1" background="1" width="180" wordwrap="1" backgroundcolor="0xffffff" borderalpha="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" height="20"/>
+      <polystyle backgroundalpha="0.25098" mode="0" handcursor="1" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff"/>
+      <hotspot description="" pan="-180" customimage="media/hotspot.png" skinid="ht_node" target="-91.5/0.0/80" customimageheight="112" fov="5" distance3D="1465.84" distance="10" id="Point01" url="{node11}" customimagewidth="128" title="In Front of Steps" use3D="1" tilt="-32.89"/>
+      <hotspot description="" pan="-57.65" customimage="media/hotspot.png" skinid="ht_node" target="1.0/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" id="Point02" url="{node6}" customimagewidth="128" title="Main Mandapa" use3D="1" tilt="-23.75"/>
+    </hotspots>
+    <media>
+      <sound mode="0" startmutedmobile="0" pan="-1.000" pansize="10.000" ambientlevel="0.000" tiltsize="10.000" loop="1" id="_background" nodechangekeep="0" level="1.000" tilt="-1.000" field="90.000">
+        <source url="media/Dharasuram-06.mp3"/>
+      </sound>
+    </media>
+    <transition softedge="0" zoomfov="20" blendcolor="0x000000" enabled="1" zoomout="0" type="crossdissolve" zoomspeed="2" blendtime="1" zoomin="0" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control lockedkeyboard="0" dblclickfullscreen="0" simulatemass="1" speedwheel="1" rubberband="0" invertwheel="0" lockedkeyboardzoom="0" lockedwheel="0" contextprojections="0" invertcontrol="1" sensitivity="8" hideabout="1" contextfullscreen="1" lockedmouse="0"/>
+  </panorama>
+  <panorama id="node6" hideabout="1">
+    <input tilesize="2048" levelingroll="0" prev1url="images/18a_o_preview_1.jpg" tilevrurl="images/18a_ovr.jpg" tilescale="1.004883" tile3url="images/18a_o_3.jpg" prev5url="images/18a_o_preview_5.jpg" levelingpitch="0" prev3url="images/18a_o_preview_3.jpg" tile4url="images/18a_o_4.jpg" tile0url="images/18a_o_0.jpg" tile2url="images/18a_o_2.jpg" prev0url="images/18a_o_preview_0.jpg" prev2url="images/18a_o_preview_2.jpg" tile5url="images/18a_o_5.jpg" prev4url="images/18a_o_preview_4.jpg" tile1url="images/18a_o_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start pan="1" fov="80" tilt="0" projection="4"/>
+      <flyin pan="0" fov="170" tilt="-90" projection="9"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max fovstereographic="270" fovfisheye="360" scaletofit="1" pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata description="" datetime="23-08-2021 07:48" info="" customnodeid="" copyright="A SURESH BABU" comment="" longitude="" author="A SURESH BABU" tags="Pano2VR6" nodeid="node6" title="Main Mandapa" latitude="" source="" heading="0"/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label backgroundalpha="1" border="1" borderradius="1" enabled="1" background="1" width="180" wordwrap="1" backgroundcolor="0xffffff" borderalpha="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" height="20"/>
+      <polystyle backgroundalpha="0.25098" mode="0" handcursor="1" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff"/>
+      <hotspot description="" pan="-110.65" customimage="media/hotspot.png" skinid="ht_node" target="180/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" id="Point01" url="{node5}" customimagewidth="128" title="Yazhi Pillars" use3D="1" tilt="-26.51"/>
+      <hotspot description="" pan="-245.04" customimage="media/hotspot.png" skinid="ht_node" target="0.0/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" distance="10" id="Point02" url="{node7}" customimagewidth="128" title="Yazhi Pillars (West)" use3D="1" tilt="-24.62"/>
+    </hotspots>
+    <media>
+      <sound mode="0" startmutedmobile="0" pan="-1.000" pansize="10.000" ambientlevel="0.000" tiltsize="10.000" loop="1" id="_background" nodechangekeep="0" level="1.000" tilt="-1.000" field="90.000">
+        <source url="media/Dharasuram-07.mp3"/>
+      </sound>
+    </media>
+    <transition softedge="0" zoomfov="20" blendcolor="0x000000" enabled="1" zoomout="0" type="crossdissolve" zoomspeed="2" blendtime="1" zoomin="0" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control lockedkeyboard="0" dblclickfullscreen="0" simulatemass="1" speedwheel="1" rubberband="0" invertwheel="0" lockedkeyboardzoom="0" lockedwheel="0" contextprojections="0" invertcontrol="1" sensitivity="8" hideabout="1" contextfullscreen="1" lockedmouse="0"/>
+  </panorama>
+  <panorama id="node7" hideabout="1">
+    <input tilesize="2048" levelingroll="0" prev1url="images/32a_o_preview_1.jpg" tilevrurl="images/32a_ovr.jpg" tilescale="1.004883" tile3url="images/32a_o_3.jpg" prev5url="images/32a_o_preview_5.jpg" levelingpitch="0" prev3url="images/32a_o_preview_3.jpg" tile4url="images/32a_o_4.jpg" tile0url="images/32a_o_0.jpg" tile2url="images/32a_o_2.jpg" prev0url="images/32a_o_preview_0.jpg" prev2url="images/32a_o_preview_2.jpg" tile5url="images/32a_o_5.jpg" prev4url="images/32a_o_preview_4.jpg" tile1url="images/32a_o_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start pan="0" fov="80" tilt="0" projection="4"/>
+      <flyin pan="0" fov="170" tilt="-90" projection="9"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max fovstereographic="270" fovfisheye="360" scaletofit="1" pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata description="" datetime="23-08-2021 08:24" info="" customnodeid="" copyright="A SURESH BABU" comment="" longitude="" author="A SURESH BABU" tags="Pano2VR6" nodeid="node7" title="Yazhi Pillars (West)" latitude="" source="" heading="0"/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label backgroundalpha="1" border="1" borderradius="1" enabled="1" background="1" width="180" wordwrap="1" backgroundcolor="0xffffff" borderalpha="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" height="20"/>
+      <polystyle backgroundalpha="0.25098" mode="0" handcursor="1" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff"/>
+      <hotspot description="" pan="-228.19" customimage="media/hotspot.png" skinid="ht_node" target="1.0/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" distance="10" id="Point01" url="{node6}" customimagewidth="128" title="Main Mandapa" use3D="1" tilt="-27.5"/>
+      <hotspot description="" pan="-179.66" customimage="media/hotspot.png" skinid="ht_node" target="0.0/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" distance="10" id="Point02" url="{node8}" customimagewidth="128" title="South-Side Entrance to the Sanctum" use3D="1" tilt="-18.99"/>
+    </hotspots>
+    <media>
+      <sound mode="0" startmutedmobile="0" pan="-1.000" pansize="10.000" ambientlevel="0.000" tiltsize="10.000" loop="1" id="_background" nodechangekeep="0" level="1.000" tilt="-1.000" field="90.000">
+        <source url="media/Dharasuram-08.mp3"/>
+      </sound>
+    </media>
+    <transition softedge="0" zoomfov="20" blendcolor="0x000000" enabled="1" zoomout="0" type="crossdissolve" zoomspeed="2" blendtime="1" zoomin="0" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control lockedkeyboard="0" dblclickfullscreen="0" simulatemass="1" speedwheel="1" rubberband="0" invertwheel="0" lockedkeyboardzoom="0" lockedwheel="0" contextprojections="0" invertcontrol="1" sensitivity="8" hideabout="1" contextfullscreen="1" lockedmouse="0"/>
+  </panorama>
+  <panorama id="node8" hideabout="1">
+    <input tilesize="2048" levelingroll="0" prev1url="images/38a_o_preview_1.jpg" tilevrurl="images/38a_ovr.jpg" tilescale="1.004883" tile3url="images/38a_o_3.jpg" prev5url="images/38a_o_preview_5.jpg" levelingpitch="0" prev3url="images/38a_o_preview_3.jpg" tile4url="images/38a_o_4.jpg" tile0url="images/38a_o_0.jpg" tile2url="images/38a_o_2.jpg" prev0url="images/38a_o_preview_0.jpg" prev2url="images/38a_o_preview_2.jpg" tile5url="images/38a_o_5.jpg" prev4url="images/38a_o_preview_4.jpg" tile1url="images/38a_o_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start pan="0" fov="80" tilt="0" projection="4"/>
+      <flyin pan="0" fov="170" tilt="-90" projection="9"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max fovstereographic="270" fovfisheye="360" scaletofit="1" pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata description="" datetime="23-08-2021 09:20" info="" customnodeid="" copyright="A SURESH BABU" comment="" longitude="" author="A SURESH BABU" tags="Pano2VR6" nodeid="node8" title="South-Side Entrance to the Sanctum" latitude="" source="" heading="0"/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label backgroundalpha="1" border="1" borderradius="1" enabled="1" background="1" width="180" wordwrap="1" backgroundcolor="0xffffff" borderalpha="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" height="20"/>
+      <polystyle backgroundalpha="0.25098" mode="0" handcursor="1" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff"/>
+      <hotspot description="" pan="-85.28" customimage="media/hotspot.png" skinid="ht_node" target="0.0/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" distance="10" id="Point01" url="{node7}" customimagewidth="128" title="Yazhi Pillars (West)" use3D="1" tilt="-21.91"/>
+      <hotspot description="" pan="-270.98" customimage="media/hotspot.png" skinid="ht_node" target="0.0/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" distance="10" id="Point02" url="{node9}" customimagewidth="128" title="Back Side View" use3D="1" tilt="-21.13"/>
+    </hotspots>
+    <media>
+      <sound mode="0" startmutedmobile="0" pan="-1.000" pansize="10.000" ambientlevel="0.000" tiltsize="10.000" loop="1" id="_background" nodechangekeep="0" level="1.000" tilt="-1.000" field="90.000">
+        <source url="media/Dharasuram-09.mp3"/>
+      </sound>
+    </media>
+    <transition softedge="0" zoomfov="20" blendcolor="0x000000" enabled="1" zoomout="0" type="crossdissolve" zoomspeed="2" blendtime="1" zoomin="0" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control lockedkeyboard="0" dblclickfullscreen="0" simulatemass="1" speedwheel="1" rubberband="0" invertwheel="0" lockedkeyboardzoom="0" lockedwheel="0" contextprojections="0" invertcontrol="1" sensitivity="8" hideabout="1" contextfullscreen="1" lockedmouse="0"/>
+  </panorama>
+  <panorama id="node9" hideabout="1">
+    <input tilesize="2048" levelingroll="-0.5" prev1url="images/40a_o_preview_1.jpg" tilevrurl="images/40a_ovr.jpg" tilescale="1.004883" tile3url="images/40a_o_3.jpg" prev5url="images/40a_o_preview_5.jpg" levelingpitch="0" prev3url="images/40a_o_preview_3.jpg" tile4url="images/40a_o_4.jpg" tile0url="images/40a_o_0.jpg" tile2url="images/40a_o_2.jpg" prev0url="images/40a_o_preview_0.jpg" prev2url="images/40a_o_preview_2.jpg" tile5url="images/40a_o_5.jpg" prev4url="images/40a_o_preview_4.jpg" tile1url="images/40a_o_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start pan="0" fov="80" tilt="0" projection="4"/>
+      <flyin pan="0" fov="170" tilt="-90" projection="9"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max fovstereographic="270" fovfisheye="360" scaletofit="1" pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata description="" datetime="23-08-2021 09:22" info="" customnodeid="" copyright="A SURESH BABU" comment="" longitude="" author="A SURESH BABU" tags="Pano2VR6" nodeid="node9" title="Back Side View" latitude="" source="" heading="0"/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label backgroundalpha="1" border="1" borderradius="1" enabled="1" background="1" width="180" wordwrap="1" backgroundcolor="0xffffff" borderalpha="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" height="20"/>
+      <polystyle backgroundalpha="0.25098" mode="0" handcursor="1" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff"/>
+      <hotspot description="" pan="-65.52" customimage="media/hotspot.png" skinid="ht_node" target="0.0/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" distance="10" id="Point01" url="{node8}" customimagewidth="128" title="South-Side Entrance to the Sanctum" use3D="1" tilt="-21.47"/>
+      <hotspot description="" pan="-293.08" customimage="media/hotspot.png" skinid="ht_node" target="-45.0/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" id="Point02" url="{node10}" customimagewidth="128" title="North Side View" use3D="1" tilt="-21.78"/>
+    </hotspots>
+    <media>
+      <sound mode="0" startmutedmobile="0" pan="-1.000" pansize="10.000" ambientlevel="0.000" tiltsize="10.000" loop="1" id="_background" nodechangekeep="0" level="1.000" tilt="-1.000" field="90.000">
+        <source url="media/Dharasuram-10.mp3"/>
+      </sound>
+    </media>
+    <transition softedge="0" zoomfov="20" blendcolor="0x000000" enabled="1" zoomout="0" type="crossdissolve" zoomspeed="2" blendtime="1" zoomin="0" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control lockedkeyboard="0" dblclickfullscreen="0" simulatemass="1" speedwheel="1" rubberband="0" invertwheel="0" lockedkeyboardzoom="0" lockedwheel="0" contextprojections="0" invertcontrol="1" sensitivity="8" hideabout="1" contextfullscreen="1" lockedmouse="0"/>
+  </panorama>
+  <panorama id="node10" hideabout="1">
+    <input tilesize="2048" levelingroll="-0.5" prev1url="images/42a_o_preview_1.jpg" tilevrurl="images/42a_ovr.jpg" tilescale="1.004883" tile3url="images/42a_o_3.jpg" prev5url="images/42a_o_preview_5.jpg" levelingpitch="0" prev3url="images/42a_o_preview_3.jpg" tile4url="images/42a_o_4.jpg" tile0url="images/42a_o_0.jpg" tile2url="images/42a_o_2.jpg" prev0url="images/42a_o_preview_0.jpg" prev2url="images/42a_o_preview_2.jpg" tile5url="images/42a_o_5.jpg" prev4url="images/42a_o_preview_4.jpg" tile1url="images/42a_o_1.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start pan="0" fov="70" tilt="0" projection="4"/>
+      <flyin pan="0" fov="170" tilt="-90" projection="9"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max fovstereographic="270" fovfisheye="360" scaletofit="1" pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata description="" datetime="23-08-2021 09:24" info="" customnodeid="" copyright="A SURESH BABU" comment="" longitude="" author="A SURESH BABU" tags="Pano2VR6" nodeid="node10" title="North Side View" latitude="" source="" heading="0"/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label backgroundalpha="1" border="1" borderradius="1" enabled="1" background="1" width="180" wordwrap="1" backgroundcolor="0xffffff" borderalpha="1" bordercolor="0x000000" textalpha="1" textcolor="0x000000" height="20"/>
+      <polystyle backgroundalpha="0.25098" mode="0" handcursor="1" backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff"/>
+      <hotspot description="" pan="-80.55" customimage="media/hotspot.png" skinid="ht_node" target="0.0/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" distance="10" id="Point01" url="{node9}" customimagewidth="128" title="Back Side View" use3D="1" tilt="-21.59"/>
+      <hotspot description="" pan="-284.41" customimage="media/hotspot.png" skinid="ht_node" target="-179.5/0.0/80.0" customimageheight="112" fov="5" distance3D="1465.84" id="Point02" url="{node2}" customimagewidth="128" title="Entrance" use3D="1" tilt="-19.21"/>
+    </hotspots>
+    <media>
+      <sound mode="0" startmutedmobile="0" pan="-1.000" pansize="10.000" ambientlevel="0.000" tiltsize="10.000" loop="1" id="_background" nodechangekeep="0" level="1.000" tilt="-1.000" field="90.000">
+        <source url="media/Dharasuram-11.mp3"/>
+      </sound>
+    </media>
+    <transition softedge="0" zoomfov="20" blendcolor="0x000000" enabled="1" zoomout="0" type="crossdissolve" zoomspeed="2" blendtime="1" zoomin="0" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control lockedkeyboard="0" dblclickfullscreen="0" simulatemass="1" speedwheel="1" rubberband="0" invertwheel="0" lockedkeyboardzoom="0" lockedwheel="0" contextprojections="0" invertcontrol="1" sensitivity="8" hideabout="1" contextfullscreen="1" lockedmouse="0"/>
+  </panorama>
+  <masternode>
+    <userdata description="" datetime="" info="" customnodeid="" copyright="" comment="" longitude="" author="" tags="" nodeid="master" title="" latitude="" source="" heading="0"/>
+  </masternode>
+</tour>

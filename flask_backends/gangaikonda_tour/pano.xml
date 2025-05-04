@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour start="node1" appversion="6.1.6" apprev="17950" title="GANGAIKONDA CHOLAPURAM" author="&quot;Brihadeeswara Temple&quot;">
+  <panorama id="node1" hideabout="1">
+    <input tile1url="images/01-03a_o_1.jpg" tile4url="images/01-03a_o_4.jpg" tile5url="images/01-03a_o_5.jpg" tilescale="1.004883" prev0url="images/01-03a_o_preview_0.jpg" levelingroll="1" prev3url="images/01-03a_o_preview_3.jpg" tile2url="images/01-03a_o_2.jpg" tilesize="2048" prev5url="images/01-03a_o_preview_5.jpg" levelingpitch="0" tile0url="images/01-03a_o_0.jpg" tile3url="images/01-03a_o_3.jpg" prev2url="images/01-03a_o_preview_2.jpg" tilevrurl="images/01-03a_ovr.jpg" prev1url="images/01-03a_o_preview_1.jpg" prev4url="images/01-03a_o_preview_4.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start projection="4" pan="0" tilt="0" fov="80"/>
+      <flyin projection="9" pan="0" tilt="-90" fov="170"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max pan="360" tilt="90" fov="120" fovstereographic="270" scaletofit="1" fovfisheye="360"/>
+    </view>
+    <userdata nodeid="node1" copyright="A SURESH BABU" customnodeid="" title="BRIHADEESWARA TEMPLE" tags="tourpreview" info="" longitude="" heading="0" description="" author="&quot;Brihadeeswara Temple&quot;" source="" comment="" latitude="" datetime="19-08-2021 07:31"/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" width="180" textalpha="1" background="1" enabled="1" bordercolor="0x000000" backgroundalpha="1" borderradius="1" wordwrap="1" backgroundcolor="0xffffff" border="1" borderalpha="1" textcolor="0x000000"/>
+      <polystyle handcursor="1" bordercolor="0x0000ff" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" borderalpha="1"/>
+      <hotspot customimagewidth="128" id="Point01" title="Behind Nandi" url="{node2}" pan="-350.9" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-17.27" fov="5" target="0.0/0.0/80.0" use3D="1" distance3D="1465.84"/>
+    </hotspots>
+    <media>
+      <sound tiltsize="10.000" level="1.000" loop="1" id="_background" pan="-1.000" ambientlevel="0.000" nodechangekeep="0" pansize="10.000" startmutedmobile="0" mode="0" field="90.000" tilt="-1.000">
+        <source url="media/GKCPuram-01.mp3"/>
+      </sound>
+    </media>
+    <transition zoomspeed="2" enabled="1" zoomoutpause="1" softedge="0" zoomfov="20" blendcolor="0x000000" zoomin="0" type="crossdissolve" zoomout="0" blendtime="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control contextfullscreen="1" dblclickfullscreen="0" lockedwheel="0" invertcontrol="1" lockedkeyboardzoom="0" contextprojections="0" invertwheel="0" simulatemass="1" lockedmouse="0" sensitivity="8" rubberband="0" lockedkeyboard="0" speedwheel="1" hideabout="1"/>
+  </panorama>
+  <panorama id="node2" hideabout="1">
+    <input tile1url="images/02-04a_o_1.jpg" tile4url="images/02-04a_o_4.jpg" tile5url="images/02-04a_o_5.jpg" tilescale="1.004883" prev0url="images/02-04a_o_preview_0.jpg" levelingroll="0" prev3url="images/02-04a_o_preview_3.jpg" tile2url="images/02-04a_o_2.jpg" tilesize="2048" prev5url="images/02-04a_o_preview_5.jpg" levelingpitch="0" tile0url="images/02-04a_o_0.jpg" tile3url="images/02-04a_o_3.jpg" prev2url="images/02-04a_o_preview_2.jpg" tilevrurl="images/02-04a_ovr.jpg" prev1url="images/02-04a_o_preview_1.jpg" prev4url="images/02-04a_o_preview_4.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start projection="4" pan="0" tilt="0" fov="80"/>
+      <flyin projection="9" pan="0" tilt="-90" fov="170"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max pan="360" tilt="90" fov="120" fovstereographic="270" scaletofit="1" fovfisheye="360"/>
+    </view>
+    <userdata nodeid="node2" copyright="A SURESH BABU" customnodeid="" title="Behind Nandi" tags="Pano2VR6" info="" longitude="" heading="0" description="" author="A SURESH BABU" source="" comment="" latitude="" datetime="19-08-2021 07:41"/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" width="180" textalpha="1" background="1" enabled="1" bordercolor="0x000000" backgroundalpha="1" borderradius="1" wordwrap="1" backgroundcolor="0xffffff" border="1" borderalpha="1" textcolor="0x000000"/>
+      <polystyle handcursor="1" bordercolor="0x0000ff" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" borderalpha="1"/>
+      <hotspot customimagewidth="128" id="Point01" title="Front of Nandi" url="{node3}" pan="-352.29" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-14.26" fov="5" target="180.0/10.0/80.0" use3D="1" distance3D="1465.84"/>
+      <hotspot customimagewidth="128" id="Point02" title="BRIHADISVARA TEMPLE" url="{node1}" pan="-177.43" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-17.44" fov="5" target="180/0.0/80.0" use3D="1" distance3D="1465.84"/>
+    </hotspots>
+    <media>
+      <sound tiltsize="10.000" level="1.000" loop="1" id="_background" pan="-1.000" ambientlevel="0.000" nodechangekeep="0" pansize="10.000" startmutedmobile="0" mode="0" field="90.000" tilt="-1.000">
+        <source url="media/GKCPuram-02.mp3"/>
+      </sound>
+    </media>
+    <transition zoomspeed="2" enabled="1" zoomoutpause="1" softedge="0" zoomfov="20" blendcolor="0x000000" zoomin="0" type="crossdissolve" zoomout="0" blendtime="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control contextfullscreen="1" dblclickfullscreen="0" lockedwheel="0" invertcontrol="1" lockedkeyboardzoom="0" contextprojections="0" invertwheel="0" simulatemass="1" lockedmouse="0" sensitivity="8" rubberband="0" lockedkeyboard="0" speedwheel="1" hideabout="1"/>
+  </panorama>
+  <panorama id="node3" hideabout="1">
+    <input tile1url="images/03-45a_o_1.jpg" tile4url="images/03-45a_o_4.jpg" tile5url="images/03-45a_o_5.jpg" tilescale="1.004883" prev0url="images/03-45a_o_preview_0.jpg" levelingroll="0" prev3url="images/03-45a_o_preview_3.jpg" tile2url="images/03-45a_o_2.jpg" tilesize="2048" prev5url="images/03-45a_o_preview_5.jpg" levelingpitch="0" tile0url="images/03-45a_o_0.jpg" tile3url="images/03-45a_o_3.jpg" prev2url="images/03-45a_o_preview_2.jpg" tilevrurl="images/03-45a_ovr.jpg" prev1url="images/03-45a_o_preview_1.jpg" prev4url="images/03-45a_o_preview_4.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start projection="4" pan="180" tilt="10" fov="80"/>
+      <flyin projection="9" pan="0" tilt="-90" fov="170"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max pan="360" tilt="90" fov="120" fovstereographic="270" scaletofit="1" fovfisheye="360"/>
+    </view>
+    <userdata nodeid="node3" copyright="A SURESH BABU" customnodeid="" title="Front of Nandi" tags="Pano2VR6" info="" longitude="" heading="0" description="" author="A SURESH BABU" source="" comment="" latitude="" datetime="19-08-2021 07:46"/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" width="180" textalpha="1" background="1" enabled="1" bordercolor="0x000000" backgroundalpha="1" borderradius="1" wordwrap="1" backgroundcolor="0xffffff" border="1" borderalpha="1" textcolor="0x000000"/>
+      <polystyle handcursor="1" bordercolor="0x0000ff" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" borderalpha="1"/>
+      <hotspot customimagewidth="128" id="Point01" title="Durga Shrine" url="{node11}" pan="-76.53" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-18.07" fov="5" target="0.0/0.0/80.0" use3D="1" distance3D="1465.84"/>
+      <hotspot customimagewidth="128" id="Point02" title="Behind Nandi" url="{node2}" pan="-230.42" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-20.9" fov="5" target="179.1/0.0/80.0" use3D="1" distance3D="1465.84"/>
+      <hotspot customimagewidth="128" id="Point03" title="Steps to Muha Mandapam" url="{node4}" pan="-283.52" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-22.14" fov="5" target="2.7/0.0/80.0" use3D="1" distance3D="1465.84"/>
+    </hotspots>
+    <media>
+      <sound tiltsize="10.000" level="1.000" loop="1" id="_background" pan="-1.000" ambientlevel="0.000" nodechangekeep="0" pansize="10.000" startmutedmobile="0" mode="0" field="90.000" tilt="-1.000">
+        <source url="media/GKCPuram-03.mp3"/>
+      </sound>
+    </media>
+    <transition zoomspeed="2" enabled="1" zoomoutpause="1" softedge="0" zoomfov="20" blendcolor="0x000000" zoomin="0" type="crossdissolve" zoomout="0" blendtime="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control contextfullscreen="1" dblclickfullscreen="0" lockedwheel="0" invertcontrol="1" lockedkeyboardzoom="0" contextprojections="0" invertwheel="0" simulatemass="1" lockedmouse="0" sensitivity="8" rubberband="0" lockedkeyboard="0" speedwheel="1" hideabout="1"/>
+  </panorama>
+  <panorama id="node4" hideabout="1">
+    <input tile1url="images/04-07a_o_1.jpg" tile4url="images/04-07a_o_4.jpg" tile5url="images/04-07a_o_5.jpg" tilescale="1.004883" prev0url="images/04-07a_o_preview_0.jpg" levelingroll="0" prev3url="images/04-07a_o_preview_3.jpg" tile2url="images/04-07a_o_2.jpg" tilesize="2048" prev5url="images/04-07a_o_preview_5.jpg" levelingpitch="0" tile0url="images/04-07a_o_0.jpg" tile3url="images/04-07a_o_3.jpg" prev2url="images/04-07a_o_preview_2.jpg" tilevrurl="images/04-07a_ovr.jpg" prev1url="images/04-07a_o_preview_1.jpg" prev4url="images/04-07a_o_preview_4.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start projection="4" pan="2.7" tilt="0" fov="80"/>
+      <flyin projection="9" pan="0" tilt="-90" fov="170"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max pan="360" tilt="90" fov="120" fovstereographic="270" scaletofit="1" fovfisheye="360"/>
+    </view>
+    <userdata nodeid="node4" copyright="A SURESH BABU" customnodeid="" title="Steps to Muha Mandapam" tags="Pano2VR6" info="" longitude="" heading="0" description="" author="A SURESH BABU" source="" comment="" latitude="" datetime="19-08-2021 07:50"/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" width="180" textalpha="1" background="1" enabled="1" bordercolor="0x000000" backgroundalpha="1" borderradius="1" wordwrap="1" backgroundcolor="0xffffff" border="1" borderalpha="1" textcolor="0x000000"/>
+      <polystyle handcursor="1" bordercolor="0x0000ff" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" borderalpha="1"/>
+      <hotspot customimagewidth="128" id="Point01" title="Panoramic View" url="{node6}" pan="-210.74" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-17.55" fov="5" target="-5.0/0.0/80.0" use3D="1" distance3D="1465.84"/>
+      <hotspot customimagewidth="128" id="Point02" title="Muha Mandapam" url="{node5}" pan="-356.47" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-24.98" fov="5" target="-179.0/0.0/80.0" use3D="1" distance3D="1465.84"/>
+      <hotspot customimagewidth="128" id="Point03" title="Front of Nandi" url="{node3}" pan="-80.13" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-26.91" fov="5" target="180.0/10.0/80.0" use3D="1" distance3D="1465.84"/>
+    </hotspots>
+    <media>
+      <sound tiltsize="10.000" level="1.000" loop="1" id="_background" pan="-1.000" ambientlevel="0.000" nodechangekeep="0" pansize="10.000" startmutedmobile="0" mode="0" field="90.000" tilt="-1.000">
+        <source url="media/GKCPuram-04.mp3"/>
+      </sound>
+    </media>
+    <transition zoomspeed="2" enabled="1" zoomoutpause="1" softedge="0" zoomfov="20" blendcolor="0x000000" zoomin="0" type="crossdissolve" zoomout="0" blendtime="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control contextfullscreen="1" dblclickfullscreen="0" lockedwheel="0" invertcontrol="1" lockedkeyboardzoom="0" contextprojections="0" invertwheel="0" simulatemass="1" lockedmouse="0" sensitivity="8" rubberband="0" lockedkeyboard="0" speedwheel="1" hideabout="1"/>
+  </panorama>
+  <panorama id="node5" hideabout="1">
+    <input tile1url="images/05-09a_o_1.jpg" tile4url="images/05-09a_o_4.jpg" tile5url="images/05-09a_o_5.jpg" tilescale="1.004883" prev0url="images/05-09a_o_preview_0.jpg" levelingroll="1" prev3url="images/05-09a_o_preview_3.jpg" tile2url="images/05-09a_o_2.jpg" tilesize="2048" prev5url="images/05-09a_o_preview_5.jpg" levelingpitch="0" tile0url="images/05-09a_o_0.jpg" tile3url="images/05-09a_o_3.jpg" prev2url="images/05-09a_o_preview_2.jpg" tilevrurl="images/05-09a_ovr.jpg" prev1url="images/05-09a_o_preview_1.jpg" prev4url="images/05-09a_o_preview_4.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start projection="4" pan="-178.99" tilt="0" fov="80"/>
+      <flyin projection="9" pan="0" tilt="-90" fov="170"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max pan="360" tilt="90" fov="120" fovstereographic="270" scaletofit="1" fovfisheye="360"/>
+    </view>
+    <userdata nodeid="node5" copyright="A SURESH BABU" customnodeid="" title="Muha Mandapam" tags="Pano2VR6" info="" longitude="" heading="0" description="" author="A SURESH BABU" source="" comment="" latitude="" datetime="19-08-2021 07:57"/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" width="180" textalpha="1" background="1" enabled="1" bordercolor="0x000000" backgroundalpha="1" borderradius="1" wordwrap="1" backgroundcolor="0xffffff" border="1" borderalpha="1" textcolor="0x000000"/>
+      <polystyle handcursor="1" bordercolor="0x0000ff" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" borderalpha="1"/>
+      <hotspot customimagewidth="128" id="Point01" title="Steps to Muha Mandapam" url="{node4}" pan="-96.62" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-20.97" fov="5" target="178.3/0.0/80.0" use3D="1" distance3D="1465.84"/>
+      <hotspot customimagewidth="128" id="Point02" title="Durga Shrine" url="{node11}" pan="-268.63" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-20.44" fov="5" target="0.0/0.0/80.0" use3D="1" distance3D="1465.84"/>
+    </hotspots>
+    <media>
+      <sound tiltsize="10.000" level="1.000" loop="1" id="_background" pan="-1.000" ambientlevel="0.000" nodechangekeep="0" pansize="10.000" startmutedmobile="0" mode="0" field="90.000" tilt="-1.000">
+        <source url="media/GKCPuram-05.mp3"/>
+      </sound>
+    </media>
+    <transition zoomspeed="2" enabled="1" zoomoutpause="1" softedge="0" zoomfov="20" blendcolor="0x000000" zoomin="0" type="crossdissolve" zoomout="0" blendtime="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control contextfullscreen="1" dblclickfullscreen="0" lockedwheel="0" invertcontrol="1" lockedkeyboardzoom="0" contextprojections="0" invertwheel="0" simulatemass="1" lockedmouse="0" sensitivity="8" rubberband="0" lockedkeyboard="0" speedwheel="1" hideabout="1"/>
+  </panorama>
+  <panorama id="node6" hideabout="1">
+    <input tile1url="images/06-11a_o_1.jpg" tile4url="images/06-11a_o_4.jpg" tile5url="images/06-11a_o_5.jpg" tilescale="1.004883" prev0url="images/06-11a_o_preview_0.jpg" levelingroll="0" prev3url="images/06-11a_o_preview_3.jpg" tile2url="images/06-11a_o_2.jpg" tilesize="2048" prev5url="images/06-11a_o_preview_5.jpg" levelingpitch="0" tile0url="images/06-11a_o_0.jpg" tile3url="images/06-11a_o_3.jpg" prev2url="images/06-11a_o_preview_2.jpg" tilevrurl="images/06-11a_ovr.jpg" prev1url="images/06-11a_o_preview_1.jpg" prev4url="images/06-11a_o_preview_4.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start projection="4" pan="-5" tilt="0" fov="80"/>
+      <flyin projection="9" pan="0" tilt="-90" fov="170"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max pan="360" tilt="90" fov="120" fovstereographic="270" scaletofit="1" fovfisheye="360"/>
+    </view>
+    <userdata nodeid="node6" copyright="A SURESH BABU" customnodeid="" title="Panoramic View" tags="Pano2VR6" info="" longitude="" heading="0" description="" author="A SURESH BABU" source="" comment="" latitude="" datetime="19-08-2021 08:05"/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" width="180" textalpha="1" background="1" enabled="1" bordercolor="0x000000" backgroundalpha="1" borderradius="1" wordwrap="1" backgroundcolor="0xffffff" border="1" borderalpha="1" textcolor="0x000000"/>
+      <polystyle handcursor="1" bordercolor="0x0000ff" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" borderalpha="1"/>
+      <hotspot customimagewidth="128" id="Point01" title="Steps to Muha Mandapam" url="{node4}" pan="-94.76" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-13.03" fov="5" target="2.7/0.0/80.0" use3D="1" distance3D="1465.84"/>
+      <hotspot customimagewidth="128" id="Point02" title="South side Entrance" url="{node7}" pan="-344.9" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-14.63" fov="5" target="0.0/0.0/80.0" use3D="1" distance3D="1465.84"/>
+    </hotspots>
+    <media>
+      <sound tiltsize="10.000" level="1.000" loop="1" id="_background" pan="-1.000" ambientlevel="0.000" nodechangekeep="0" pansize="10.000" startmutedmobile="0" mode="0" field="90.000" tilt="-1.000">
+        <source url="media/GKCPuram-06.mp3"/>
+      </sound>
+    </media>
+    <transition zoomspeed="2" enabled="1" zoomoutpause="1" softedge="0" zoomfov="20" blendcolor="0x000000" zoomin="0" type="crossdissolve" zoomout="0" blendtime="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control contextfullscreen="1" dblclickfullscreen="0" lockedwheel="0" invertcontrol="1" lockedkeyboardzoom="0" contextprojections="0" invertwheel="0" simulatemass="1" lockedmouse="0" sensitivity="8" rubberband="0" lockedkeyboard="0" speedwheel="1" hideabout="1"/>
+  </panorama>
+  <panorama id="node7" hideabout="1">
+    <input tile1url="images/07-15a_o_1.jpg" tile4url="images/07-15a_o_4.jpg" tile5url="images/07-15a_o_5.jpg" tilescale="1.004883" prev0url="images/07-15a_o_preview_0.jpg" levelingroll="0" prev3url="images/07-15a_o_preview_3.jpg" tile2url="images/07-15a_o_2.jpg" tilesize="2048" prev5url="images/07-15a_o_preview_5.jpg" levelingpitch="0" tile0url="images/07-15a_o_0.jpg" tile3url="images/07-15a_o_3.jpg" prev2url="images/07-15a_o_preview_2.jpg" tilevrurl="images/07-15a_ovr.jpg" prev1url="images/07-15a_o_preview_1.jpg" prev4url="images/07-15a_o_preview_4.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start projection="4" pan="0" tilt="0" fov="80"/>
+      <flyin projection="9" pan="0" tilt="-90" fov="170"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max pan="360" tilt="90" fov="120" fovstereographic="270" scaletofit="1" fovfisheye="360"/>
+    </view>
+    <userdata nodeid="node7" copyright="A SURESH BABU" customnodeid="" title="South side Entrance" tags="Pano2VR6" info="" longitude="" heading="0" description="" author="A SURESH BABU" source="" comment="" latitude="" datetime="19-08-2021 08:51"/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" width="180" textalpha="1" background="1" enabled="1" bordercolor="0x000000" backgroundalpha="1" borderradius="1" wordwrap="1" backgroundcolor="0xffffff" border="1" borderalpha="1" textcolor="0x000000"/>
+      <polystyle handcursor="1" bordercolor="0x0000ff" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" borderalpha="1"/>
+      <hotspot customimagewidth="128" id="Point01" title="Southside of Gopuram" url="{node8}" pan="-192.55" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-35.61" fov="5" target="0.0/0.0/80.0" use3D="1" distance3D="1465.84"/>
+      <hotspot customimagewidth="128" id="Point02" title="Panoramic View" url="{node6}" pan="-170.35" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-35.91" fov="5" target="-5.0/0.0/80.0" use3D="1" distance3D="1465.84"/>
+    </hotspots>
+    <media>
+      <sound tiltsize="10.000" level="1.000" loop="1" id="_background" pan="-1.000" ambientlevel="0.000" nodechangekeep="0" pansize="10.000" startmutedmobile="0" mode="0" field="90.000" tilt="-1.000">
+        <source url="media/GKCPuram-07.mp3"/>
+      </sound>
+    </media>
+    <transition zoomspeed="2" enabled="1" zoomoutpause="1" softedge="0" zoomfov="20" blendcolor="0x000000" zoomin="0" type="crossdissolve" zoomout="0" blendtime="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control contextfullscreen="1" dblclickfullscreen="0" lockedwheel="0" invertcontrol="1" lockedkeyboardzoom="0" contextprojections="0" invertwheel="0" simulatemass="1" lockedmouse="0" sensitivity="8" rubberband="0" lockedkeyboard="0" speedwheel="1" hideabout="1"/>
+  </panorama>
+  <panorama id="node8" hideabout="1">
+    <input tile1url="images/08-16a_o_1.jpg" tile4url="images/08-16a_o_4.jpg" tile5url="images/08-16a_o_5.jpg" tilescale="1.004883" prev0url="images/08-16a_o_preview_0.jpg" levelingroll="0" prev3url="images/08-16a_o_preview_3.jpg" tile2url="images/08-16a_o_2.jpg" tilesize="2048" prev5url="images/08-16a_o_preview_5.jpg" levelingpitch="0" tile0url="images/08-16a_o_0.jpg" tile3url="images/08-16a_o_3.jpg" prev2url="images/08-16a_o_preview_2.jpg" tilevrurl="images/08-16a_ovr.jpg" prev1url="images/08-16a_o_preview_1.jpg" prev4url="images/08-16a_o_preview_4.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start projection="4" pan="0" tilt="0" fov="80"/>
+      <flyin projection="9" pan="0" tilt="-90" fov="170"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max pan="360" tilt="90" fov="120" fovstereographic="270" scaletofit="1" fovfisheye="360"/>
+    </view>
+    <userdata nodeid="node8" copyright="A SURESH BABU" customnodeid="" title="Southside of Gopuram" tags="Pano2VR6" info="" longitude="" heading="0" description="" author="A SURESH BABU" source="" comment="" latitude="" datetime="19-08-2021 08:41"/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" width="180" textalpha="1" background="1" enabled="1" bordercolor="0x000000" backgroundalpha="1" borderradius="1" wordwrap="1" backgroundcolor="0xffffff" border="1" borderalpha="1" textcolor="0x000000"/>
+      <polystyle handcursor="1" bordercolor="0x0000ff" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" borderalpha="1"/>
+      <hotspot customimagewidth="128" id="Point01" title="South side Entrance" url="{node7}" pan="-63.77" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-15.87" fov="5" target="0.0/0.0/80.0" use3D="1" distance3D="1465.84"/>
+      <hotspot customimagewidth="128" id="Point02" title="Backside View" url="{node9}" pan="-292.27" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-12.25" fov="5" target="0.0/0.0/80.0" use3D="1" distance3D="1465.84"/>
+    </hotspots>
+    <media>
+      <sound tiltsize="10.000" level="1.000" loop="1" id="_background" pan="-1.000" ambientlevel="0.000" nodechangekeep="0" pansize="10.000" startmutedmobile="0" mode="0" field="90.000" tilt="-1.000">
+        <source url="media/GKCPuram-08.mp3"/>
+      </sound>
+    </media>
+    <transition zoomspeed="2" enabled="1" zoomoutpause="1" softedge="0" zoomfov="20" blendcolor="0x000000" zoomin="0" type="crossdissolve" zoomout="0" blendtime="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control contextfullscreen="1" dblclickfullscreen="0" lockedwheel="0" invertcontrol="1" lockedkeyboardzoom="0" contextprojections="0" invertwheel="0" simulatemass="1" lockedmouse="0" sensitivity="8" rubberband="0" lockedkeyboard="0" speedwheel="1" hideabout="1"/>
+  </panorama>
+  <panorama id="node9" hideabout="1">
+    <input tile1url="images/09-25a_o_1.jpg" tile4url="images/09-25a_o_4.jpg" tile5url="images/09-25a_o_5.jpg" tilescale="1.004883" prev0url="images/09-25a_o_preview_0.jpg" levelingroll="0" prev3url="images/09-25a_o_preview_3.jpg" tile2url="images/09-25a_o_2.jpg" tilesize="2048" prev5url="images/09-25a_o_preview_5.jpg" levelingpitch="0" tile0url="images/09-25a_o_0.jpg" tile3url="images/09-25a_o_3.jpg" prev2url="images/09-25a_o_preview_2.jpg" tilevrurl="images/09-25a_ovr.jpg" prev1url="images/09-25a_o_preview_1.jpg" prev4url="images/09-25a_o_preview_4.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start projection="4" pan="0" tilt="0" fov="80"/>
+      <flyin projection="9" pan="0" tilt="-90" fov="170"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max pan="360" tilt="90" fov="120" fovstereographic="270" scaletofit="1" fovfisheye="360"/>
+    </view>
+    <userdata nodeid="node9" copyright="A SURESH BABU" customnodeid="" title="Backside View" tags="Pano2VR6" info="" longitude="" heading="0" description="" author="A SURESH BABU" source="" comment="" latitude="" datetime="19-08-2021 08:28"/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" width="180" textalpha="1" background="1" enabled="1" bordercolor="0x000000" backgroundalpha="1" borderradius="1" wordwrap="1" backgroundcolor="0xffffff" border="1" borderalpha="1" textcolor="0x000000"/>
+      <polystyle handcursor="1" bordercolor="0x0000ff" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" borderalpha="1"/>
+      <hotspot customimagewidth="128" id="Point01" title="Southside of Gopuram" url="{node8}" pan="-57.21" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-14.58" fov="5" target="0.0/0.0/80.0" use3D="1" distance3D="1465.84"/>
+      <hotspot customimagewidth="128" id="Point02" title="Northside of Gopuram" url="{node10}" pan="-300.68" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-14.86" fov="5" target="0.0/0.0/80.0" use3D="1" distance3D="1465.84"/>
+    </hotspots>
+    <media>
+      <sound tiltsize="10.000" level="1.000" loop="1" id="_background" pan="-1.000" ambientlevel="0.000" nodechangekeep="0" pansize="10.000" startmutedmobile="0" mode="0" field="90.000" tilt="-1.000">
+        <source url="media/GKCPuram-09.mp3"/>
+      </sound>
+    </media>
+    <transition zoomspeed="2" enabled="1" zoomoutpause="1" softedge="0" zoomfov="20" blendcolor="0x000000" zoomin="0" type="crossdissolve" zoomout="0" blendtime="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control contextfullscreen="1" dblclickfullscreen="0" lockedwheel="0" invertcontrol="1" lockedkeyboardzoom="0" contextprojections="0" invertwheel="0" simulatemass="1" lockedmouse="0" sensitivity="8" rubberband="0" lockedkeyboard="0" speedwheel="1" hideabout="1"/>
+  </panorama>
+  <panorama id="node10" hideabout="1">
+    <input tile1url="images/10-33a_o_1.jpg" tile4url="images/10-33a_o_4.jpg" tile5url="images/10-33a_o_5.jpg" tilescale="1.004883" prev0url="images/10-33a_o_preview_0.jpg" levelingroll="1" prev3url="images/10-33a_o_preview_3.jpg" tile2url="images/10-33a_o_2.jpg" tilesize="2048" prev5url="images/10-33a_o_preview_5.jpg" levelingpitch="0" tile0url="images/10-33a_o_0.jpg" tile3url="images/10-33a_o_3.jpg" prev2url="images/10-33a_o_preview_2.jpg" tilevrurl="images/10-33a_ovr.jpg" prev1url="images/10-33a_o_preview_1.jpg" prev4url="images/10-33a_o_preview_4.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start projection="4" pan="0" tilt="0" fov="80"/>
+      <flyin projection="9" pan="0" tilt="-90" fov="170"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max pan="360" tilt="90" fov="120" fovstereographic="270" scaletofit="1" fovfisheye="360"/>
+    </view>
+    <userdata nodeid="node10" copyright="A SURESH BABU" customnodeid="" title="Northside of Gopuram" tags="Pano2VR6" info="" longitude="" heading="0" description="" author="A SURESH BABU" source="" comment="" latitude="" datetime="19-08-2021 09:25"/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" width="180" textalpha="1" background="1" enabled="1" bordercolor="0x000000" backgroundalpha="1" borderradius="1" wordwrap="1" backgroundcolor="0xffffff" border="1" borderalpha="1" textcolor="0x000000"/>
+      <polystyle handcursor="1" bordercolor="0x0000ff" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" borderalpha="1"/>
+      <hotspot customimagewidth="128" id="Point01" title="Backside View" url="{node9}" pan="-77.38" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-12.74" fov="5" target="0.0/0.0/80.0" use3D="1" distance3D="1465.84"/>
+      <hotspot customimagewidth="128" id="Point02" title="Durga Shrine" url="{node11}" pan="-299.25" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-15" fov="5" target="0.0/0.0/80.0" use3D="1" distance3D="1465.84"/>
+    </hotspots>
+    <media>
+      <sound tiltsize="10.000" level="1.000" loop="1" id="_background" pan="-1.000" ambientlevel="0.000" nodechangekeep="0" pansize="10.000" startmutedmobile="0" mode="0" field="90.000" tilt="-1.000">
+        <source url="media/GKCPuram-10.mp3"/>
+      </sound>
+    </media>
+    <transition zoomspeed="2" enabled="1" zoomoutpause="1" softedge="0" zoomfov="20" blendcolor="0x000000" zoomin="0" type="crossdissolve" zoomout="0" blendtime="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control contextfullscreen="1" dblclickfullscreen="0" lockedwheel="0" invertcontrol="1" lockedkeyboardzoom="0" contextprojections="0" invertwheel="0" simulatemass="1" lockedmouse="0" sensitivity="8" rubberband="0" lockedkeyboard="0" speedwheel="1" hideabout="1"/>
+  </panorama>
+  <panorama id="node11" hideabout="1">
+    <input tile1url="images/11-41a_o_1.jpg" tile4url="images/11-41a_o_4.jpg" tile5url="images/11-41a_o_5.jpg" tilescale="1.004883" prev0url="images/11-41a_o_preview_0.jpg" levelingroll="-1" prev3url="images/11-41a_o_preview_3.jpg" tile2url="images/11-41a_o_2.jpg" tilesize="2048" prev5url="images/11-41a_o_preview_5.jpg" levelingpitch="0" tile0url="images/11-41a_o_0.jpg" tile3url="images/11-41a_o_3.jpg" prev2url="images/11-41a_o_preview_2.jpg" tilevrurl="images/11-41a_ovr.jpg" prev1url="images/11-41a_o_preview_1.jpg" prev4url="images/11-41a_o_preview_4.jpg">
+      <preview color="0x000000"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start projection="4" pan="0" tilt="0" fov="80"/>
+      <flyin projection="9" pan="0" tilt="-90" fov="170"/>
+      <min pan="0" fovpixel="2" tilt="-90"/>
+      <max pan="360" tilt="90" fov="120" fovstereographic="270" scaletofit="1" fovfisheye="360"/>
+    </view>
+    <userdata nodeid="node11" copyright="A SURESH BABU" customnodeid="" title="Durga Shrine" tags="Pano2VR6" info="" longitude="" heading="0" description="" author="A SURESH BABU" source="" comment="" latitude="" datetime="19-08-2021 09:42"/>
+    <hotspots height="20" width="180" wordwrap="1">
+      <label height="20" width="180" textalpha="1" background="1" enabled="1" bordercolor="0x000000" backgroundalpha="1" borderradius="1" wordwrap="1" backgroundcolor="0xffffff" border="1" borderalpha="1" textcolor="0x000000"/>
+      <polystyle handcursor="1" bordercolor="0x0000ff" backgroundalpha="0.25098" backgroundcolor="0x0000ff" mode="0" borderalpha="1"/>
+      <hotspot customimagewidth="128" id="Point01" title="Northside of Gopuram" url="{node10}" pan="-340.76" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-17.29" fov="5" target="0.0/0.0/80.0" use3D="1" distance3D="1465.84"/>
+      <hotspot customimagewidth="128" id="Point02" title="Front of Nandi" url="{node3}" pan="-260.14" description="" customimage="media/hotspot.png" skinid="ht_node" customimageheight="112" tilt="-18.05" fov="5" target="133.4/0.0/80.0" use3D="1" distance3D="1465.84"/>
+    </hotspots>
+    <media>
+      <sound tiltsize="10.000" level="1.000" loop="1" id="_background" pan="-1.000" ambientlevel="0.000" nodechangekeep="0" pansize="10.000" startmutedmobile="0" mode="0" field="90.000" tilt="-1.000">
+        <source url="media/GKCPuram-11.mp3"/>
+      </sound>
+    </media>
+    <transition zoomspeed="2" enabled="1" zoomoutpause="1" softedge="0" zoomfov="20" blendcolor="0x000000" zoomin="0" type="crossdissolve" zoomout="0" blendtime="1"/>
+    <animation syncanimationwithvideo="0" useinautorotation="0" animsequence="Animation01"/>
+    <control contextfullscreen="1" dblclickfullscreen="0" lockedwheel="0" invertcontrol="1" lockedkeyboardzoom="0" contextprojections="0" invertwheel="0" simulatemass="1" lockedmouse="0" sensitivity="8" rubberband="0" lockedkeyboard="0" speedwheel="1" hideabout="1"/>
+  </panorama>
+  <masternode>
+    <userdata nodeid="master" copyright="" customnodeid="" title="" tags="" info="" longitude="" heading="0" description="" author="" source="" comment="" latitude="" datetime=""/>
+  </masternode>
+</tour>

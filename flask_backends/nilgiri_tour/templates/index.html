@@ -1,0 +1,1086 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NILGIRI,RAILWAY STATION | VIRTUAL TOUR</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/controls/OrbitControls.js"></script>
+    <script type="text/javascript" src="pano2vr_player.js"></script>
+    <script type="text/javascript" src="skin.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #000;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        }
+        #container {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        /* Avatar controls styling */
+        .avatar-controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+        
+        .avatar-controls button {
+            padding: 8px 16px;
+            background-color: orange;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        audio {
+            display: none;
+        }
+        
+        /* Toggle button to show/hide avatar */
+        #toggle-avatar {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        
+        /* Loading message */
+        .loading-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        /* Status message */
+        .status-message {
+            position: fixed;
+            bottom: 70px;
+            left: 20px;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 5px;
+            font-size: 14px;
+            z-index: 1000;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Pano2VR container -->
+    <div id="container">
+        <div class="loading-message">Loading virtual tour...</div>
+    </div>
+    
+    <!-- Avatar controls -->
+    <div class="avatar-controls" style="display: none;">
+        <button onclick="startListening()">Talk to Guide</button>
+        <button onclick="playAnimation('nod')">Nod</button>
+    </div>
+    
+    <!-- Status message -->
+    <div class="status-message" id="status-message"></div>
+    
+    <!-- Toggle avatar button -->
+    <button id="toggle-avatar" onclick="toggleAvatar()">Show Virtual Guide</button>
+    
+    <!-- Audio element for speech -->
+    <audio id="speech" controls></audio>
+    
+    <script>
+        // Initialize virtual tour
+        let pano = new pano2vrPlayer("container");
+        let skin = new pano2vrSkin(pano);
+        
+        // Three.js scene variables from Pano2VR (to be accessed)
+        let panoRenderer, panoScene, panoCamera;
+        
+        // Avatar variables
+        let avatar;
+        let head;
+        let morphTargets = {};
+        let mixer;
+        let animations = {};
+        let clock = new THREE.Clock();
+        let isLipSyncing = false;
+        let lipSyncInterval;
+        let avatarVisible = false;
+        
+        // Avatar camera and controls for focusing on face
+        let avatarCamera;
+        let controls;
+        let headBone;
+        
+        // Server status
+        let serverAvailable = false;
+        let serverCheckAttempted = false;
+        
+        // Preload avatar model for faster response
+        let avatarLoader = new THREE.GLTFLoader();
+        let avatarPromise = null;
+        
+        // Load configuration
+        window.addEventListener("load", function() {
+            pano.readConfigUrlAsync("pano.xml");
+            
+            // Preload avatar immediately
+            preloadAvatar();
+            
+            // Allow time for Pano2VR to initialize
+            setTimeout(() => {
+                // Try to access Pano2VR's WebGL context
+                if (pano && pano.renderer) {
+                    accessPanoScene();
+                } else {
+                    console.warn("Could not access Pano2VR renderer directly. Using alternative method.");
+                    // Alternative approach for integration
+                    alternativeIntegration();
+                }
+                
+                // Hide loading message after initialization
+                document.querySelector('.loading-message').style.display = 'none';
+                
+                // Check server status in the background
+                checkServerStatus();
+            }, 2000);
+        });
+        
+        // Preload avatar model
+        function preloadAvatar() {
+            if (!avatarPromise) {
+                avatarPromise = new Promise((resolve, reject) => {
+                    avatarLoader.load(
+                        "https://models.readyplayer.me/67dc2a287e729a29f9b8d591.glb",
+                        resolve,
+                        undefined,
+                        reject
+                    );
+                });
+            }
+            return avatarPromise;
+        }
+        
+        // Check if the server is available
+        async function checkServerStatus() {
+            if (serverCheckAttempted) return;
+            serverCheckAttempted = true;
+            
+            try {
+                showStatus("Connecting to AI guide...");
+                
+                // Simple HEAD request to check server availability with timeout
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 3000);
+                
+                const response = await fetch("http://127.0.0.1:5005/health", {
+                    method: 'GET',
+                    mode: 'cors',
+                    cache: 'no-cache',
+                    signal: controller.signal
+                });
+                
+                clearTimeout(timeoutId);
+                
+                if (response.ok) {
+                    serverAvailable = true;
+                    showStatus("AI guide is ready", 2000);
+                } else {
+                    showStatus("AI guide is not responding", 3000);
+                }
+            } catch (error) {
+                console.log("Server check failed:", error);
+                showStatus("AI guide connection unstable", 3000);
+            }
+        }
+        
+        // Show status message
+        function showStatus(message, duration = 0) {
+            const statusElement = document.getElementById('status-message');
+            statusElement.textContent = message;
+            statusElement.style.display = 'block';
+            
+            if (duration > 0) {
+                setTimeout(() => {
+                    statusElement.style.display = 'none';
+                }, duration);
+            }
+        }
+        
+        // Hide status message
+        function hideStatus() {
+            document.getElementById('status-message').style.display = 'none';
+        }
+        
+        // Try to access Pano2VR's WebGL scene
+        function accessPanoScene() {
+            try {
+                // This part depends on Pano2VR's internal structure
+                if (pano.renderer && pano.renderer.threeRenderer) {
+                    panoRenderer = pano.renderer.threeRenderer;
+                    panoScene = pano.renderer.scene;
+                    panoCamera = pano.renderer.camera;
+                    
+                    // If we successfully got access, initialize avatar in the same scene
+                    initializeAvatarInPanoScene();
+                } else {
+                    console.warn("Could not access Pano2VR Three.js objects. Using alternative method.");
+                    alternativeIntegration();
+                }
+            } catch (e) {
+                console.error("Error accessing Pano2VR scene:", e);
+                alternativeIntegration();
+            }
+        }
+        
+        // Alternative integration using CSS 3D positioning
+        function alternativeIntegration() {
+            // Create a separate Three.js scene for the avatar
+            // but position it to appear integrated with the virtual tour
+            createOverlayAvatar();
+        }
+        
+        // Initialize avatar directly in Pano2VR's Three.js scene
+        async function initializeAvatarInPanoScene() {
+            try {
+                // Wait for avatar to be preloaded
+                const gltf = await avatarPromise;
+                
+                avatar = gltf.scene;
+                
+                // Position the avatar in the scene - adjusted for better face visibility
+                avatar.position.set(-0.8, 0.7, -1.8);
+                avatar.rotation.y = 0;
+                avatar.scale.set(0.7, 0.7, 0.7);
+                
+                // Hide avatar initially
+                avatar.visible = false;
+                
+                // Add avatar to the pano scene
+                panoScene.add(avatar);
+                
+                // Advanced lighting setup specifically for the face
+                const faceLight = new THREE.SpotLight(0xffffff, 3);
+                faceLight.position.set(0, 1, 1);
+                faceLight.angle = 0.5;
+                faceLight.penumbra = 0.5;
+                faceLight.decay = 0;
+                faceLight.target = avatar;
+                avatar.add(faceLight);
+                
+                const fillLight = new THREE.PointLight(0xffffcc, 1);
+                fillLight.position.set(0, 0.5, 0.5);
+                avatar.add(fillLight);
+                
+                const rimLight = new THREE.PointLight(0xaaaaff, 1);
+                rimLight.position.set(0, 1.5, -1);
+                avatar.add(rimLight);
+                
+                const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
+                avatar.add(ambientLight);
+                
+                // Find head for animations and head bone for focus
+                avatar.traverse((object) => {
+                    if (object.isMesh) {
+                        if (object.material) {
+                            if (object.name.includes('Head') || object.name.includes('Face')) {
+                                object.material.emissive = new THREE.Color(0x444444);
+                                object.material.emissiveIntensity = 0.3;
+                                object.material.roughness = 0.7;
+                                object.material.metalness = 0.1;
+                                
+                                if (object.material.envMapIntensity !== undefined) {
+                                    object.material.envMapIntensity = 1.5;
+                                }
+                            }
+                            
+                            if (object.name.includes('Hand') || object.name.includes('Arm')) {
+                                object.material.transparent = true;
+                                object.material.opacity = 0.8;
+                                object.material.emissive = new THREE.Color(0x000000);
+                            }
+                        }
+                        
+                        if (object.morphTargetDictionary && object.name.includes('Head')) {
+                            morphTargets = object;
+                        }
+                        
+                        if (object.name.includes('Head')) {
+                            head = object;
+                        }
+                    }
+                    
+                    if (object.isBone && (object.name.includes('Head') || object.name.includes('Neck'))) {
+                        headBone = object;
+                    }
+                });
+                
+                // Create animation mixer
+                mixer = new THREE.AnimationMixer(avatar);
+                
+                // Override Pano2VR's render function to include our avatar animations
+                const originalRender = panoRenderer.render;
+                panoRenderer.render = function(scene, camera) {
+                    if (avatar && avatar.visible) {
+                        const delta = clock.getDelta();
+                        if (mixer) mixer.update(delta);
+                        
+                        const cameraPosition = new THREE.Vector3();
+                        camera.getWorldPosition(cameraPosition);
+                        
+                        const direction = new THREE.Vector3();
+                        direction.subVectors(cameraPosition, avatar.position);
+                        direction.y = 0;
+                        
+                        const targetRotation = Math.atan2(direction.x, direction.z);
+                        avatar.rotation.y = targetRotation;
+                        
+                        const distanceToCamera = direction.length();
+                        
+                        if (distanceToCamera < 1.5) {
+                            avatar.position.z -= 0.05;
+                        } else if (distanceToCamera > 3) {
+                            avatar.position.z += 0.05;
+                        }
+                        
+                        avatar.position.y = 0.7;
+                    }
+                    
+                    originalRender.call(this, scene, camera);
+                };
+                
+                // Auto-focus on face when avatar is loaded
+                setTimeout(focusOnFace, 500);
+            } catch (error) {
+                console.error("Error loading avatar:", error);
+            }
+        }
+        
+        // Create an overlay avatar using a separate Three.js renderer
+        async function createOverlayAvatar() {
+            try {
+                // Create Three.js Scene for Avatar
+                const avatarScene = new THREE.Scene();
+                avatarCamera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+                avatarCamera.position.set(0, 1.5, 2);
+                
+                // Create renderer with transparent background
+                const avatarRenderer = new THREE.WebGLRenderer({ 
+                    antialias: true, 
+                    alpha: true,
+                    preserveDrawingBuffer: false
+                });
+                avatarRenderer.setSize(window.innerWidth, window.innerHeight);
+                avatarRenderer.setClearColor(0x000000, 0);
+                avatarRenderer.domElement.style.position = 'absolute';
+                avatarRenderer.domElement.style.top = '0';
+                avatarRenderer.domElement.style.left = '0';
+                avatarRenderer.domElement.style.pointerEvents = 'none';
+                avatarRenderer.domElement.style.zIndex = '10';
+                document.body.appendChild(avatarRenderer.domElement);
+                
+                // Set up controls for face focusing
+                controls = new THREE.OrbitControls(avatarCamera, avatarRenderer.domElement);
+                controls.enableDamping = true;
+                controls.dampingFactor = 0.25;
+                controls.enableZoom = true;
+                
+                // Enhanced lighting specifically for face visibility
+                const keyLight = new THREE.SpotLight(0xffffff, 4);
+                keyLight.position.set(1, 2, 3);
+                keyLight.angle = 0.6;
+                keyLight.penumbra = 0.5;
+                keyLight.decay = 0;
+                avatarScene.add(keyLight);
+                
+                const fillLight = new THREE.PointLight(0xffffcc, 2);
+                fillLight.position.set(-1, 1, 2);
+                avatarScene.add(fillLight);
+                
+                const faceLight = new THREE.SpotLight(0xffffff, 3);
+                faceLight.position.set(0, 1.7, 2);
+                faceLight.angle = 0.4;
+                faceLight.target.position.set(0, 1.5, 0);
+                faceLight.penumbra = 0.5;
+                avatarScene.add(faceLight);
+                avatarScene.add(faceLight.target);
+                
+                const ambientLight = new THREE.AmbientLight(0xffffff, 2);
+                avatarScene.add(ambientLight);
+                
+                // Wait for avatar to be preloaded
+                const gltf = await avatarPromise;
+                avatar = gltf.scene;
+                avatarScene.add(avatar);
+                
+                // Position the avatar for optimal face visibility
+                avatar.position.set(0, 0.5, -1.5);
+                avatar.rotation.y = 0;
+                avatar.scale.set(0.8, 0.8, 0.8);
+                
+                // Hide avatar initially
+                avatar.visible = false;
+                
+                // Enhance face materials and reduce hand importance
+                avatar.traverse((object) => {
+                    if (object.isMesh) {
+                        if (object.material) {
+                            if (object.name.includes('Head') || object.name.includes('Face')) {
+                                object.material.emissive = new THREE.Color(0x444444);
+                                object.material.emissiveIntensity = 0.3;
+                                object.material.roughness = 0.7;
+                                object.material.metalness = 0.1;
+                                
+                                if (object.material.envMapIntensity !== undefined) {
+                                    object.material.envMapIntensity = 1.5;
+                                }
+                            }
+                            
+                            if (object.name.includes('Hand') || object.name.includes('Arm')) {
+                                object.material.transparent = true;
+                                object.material.opacity = 0.7;
+                                object.material.emissive = new THREE.Color(0x000000);
+                            }
+                        }
+                        
+                        if (object.morphTargetDictionary && object.name.includes('Head')) {
+                            morphTargets = object;
+                        }
+                        
+                        if (object.name.includes('Head')) {
+                            head = object;
+                        }
+                    }
+                    
+                    if (object.isBone && (object.name.includes('Head') || object.name.includes('Neck'))) {
+                        headBone = object;
+                    }
+                });
+                
+                // Create animation mixer
+                mixer = new THREE.AnimationMixer(avatar);
+                
+                // Add additional face-specific light attached to the head
+                if (head) {
+                    const headLight = new THREE.PointLight(0xffffff, 1.5);
+                    headLight.position.set(0, 0.2, 0.5);
+                    head.add(headLight);
+                }
+                
+                // Auto-focus on face when avatar is loaded
+                setTimeout(focusOnFace, 500);
+                
+                // Start animation loop
+                function animateAvatar() {
+                    requestAnimationFrame(animateAvatar);
+
+                    // Only render if avatar exists
+                    if (!avatar) return;
+                    
+                    // Always update the mixer for smooth transitions
+                    const delta = clock.getDelta();
+                    if (mixer) mixer.update(delta);
+                    
+                    // Skip rendering if avatar is explicitly hidden
+                    if (!avatarVisible) return;
+                    
+                    // Force avatar to be visible in case it was incorrectly set
+                    if (!avatar.visible) {
+                        console.warn("Avatar should be visible but isn't, correcting");
+                        avatar.visible = true;
+                    }
+                    
+                    controls.update();
+
+                    if (headBone) {
+                        const headPosition = new THREE.Vector3();
+                        headBone.getWorldPosition(headPosition);
+                        faceLight.target.position.copy(headPosition);
+                    }
+
+                    // Render the avatar scene
+                    avatarRenderer.render(avatarScene, avatarCamera);
+                }
+
+
+                animateAvatar();
+                
+                // Handle window resize
+                window.addEventListener('resize', function() {
+                    avatarCamera.aspect = window.innerWidth / window.innerHeight;
+                    avatarCamera.updateProjectionMatrix();
+                    avatarRenderer.setSize(window.innerWidth, window.innerHeight);
+                });
+            } catch (error) {
+                console.error("Error creating overlay avatar:", error);
+            }
+        }
+        
+        // Focus on avatar's face function
+        function focusOnFace() {
+            if (!avatar) return;
+            
+            if (headBone) {
+                const headPosition = new THREE.Vector3();
+                headBone.getWorldPosition(headPosition);
+                
+                controls.target.copy(headPosition);
+                
+                const offset = new THREE.Vector3(0, 0.1, 0.9);
+                avatarCamera.position.copy(headPosition).add(offset);
+                
+                avatarCamera.fov = 40;
+                avatarCamera.updateProjectionMatrix();
+            } else {
+                controls.target.set(0, 1.6, 0);
+                avatarCamera.position.set(0, 1.7, 0.9);
+                avatarCamera.fov = 40;
+                avatarCamera.updateProjectionMatrix();
+            }
+            
+            controls.update();
+        }
+        
+        // Nod animation
+        function nodAnimation() {
+            if (!avatar || !head) return;
+            
+            const duration = 2;
+            let time = 0;
+            let nodding = true;
+            
+            clearInterval(window.nodInterval);
+            
+            window.nodInterval = setInterval(() => {
+                if (!nodding) {
+                    clearInterval(window.nodInterval);
+                    return;
+                }
+                
+                avatar.traverse((object) => {
+                    if (object.name.includes('Head')) {
+                        object.rotation.x = Math.sin(time * 5) * 0.15;
+                    }
+                });
+                
+                time += 0.05;
+                if (time >= duration) {
+                    nodding = false;
+                }
+            }, 50);
+        }
+        
+        // Perform lip sync animation based on audio
+        function performLipSync() {
+            if (!morphTargets || !morphTargets.morphTargetDictionary) return;
+            
+            // Reset all mouth-related morphs
+            for (const key in morphTargets.morphTargetDictionary) {
+                if (key.includes('mouth') || key.includes('viseme')) {
+                    const idx = morphTargets.morphTargetDictionary[key];
+                    morphTargets.morphTargetInfluences[idx] = 0;
+                }
+            }
+            
+            // Choose random mouth shapes for lip sync
+            const mouthShapes = ['viseme_O', 'viseme_A', 'viseme_E', 'viseme_I', 'viseme_U'];
+            const randomShape = mouthShapes[Math.floor(Math.random() * mouthShapes.length)];
+            
+            if (morphTargets.morphTargetDictionary[randomShape] !== undefined) {
+                const idx = morphTargets.morphTargetDictionary[randomShape];
+                morphTargets.morphTargetInfluences[idx] = Math.random() * 0.7 + 0.2;
+            } else if (morphTargets.morphTargetDictionary['mouthOpen'] !== undefined) {
+                const idx = morphTargets.morphTargetDictionary['mouthOpen'];
+                morphTargets.morphTargetInfluences[idx] = Math.random() * 0.6 + 0.2;
+            }
+            
+            // Add slight eye blink randomly during talking for realism
+            if (morphTargets.morphTargetDictionary['eyesClosed'] !== undefined && Math.random() < 0.05) {
+                const idx = morphTargets.morphTargetDictionary['eyesClosed'];
+                morphTargets.morphTargetInfluences[idx] = 0.9;
+                
+                setTimeout(() => {
+                    if (morphTargets && morphTargets.morphTargetInfluences) {
+                        morphTargets.morphTargetInfluences[idx] = 0;
+                    }
+                }, 150);
+            }
+        }
+        
+        // Start/stop lip sync
+        function toggleLipSync(start) {
+            if (start && !isLipSyncing) {
+                isLipSyncing = true;
+                lipSyncInterval = setInterval(performLipSync, 150);
+            } else if (!start && isLipSyncing) {
+                isLipSyncing = false;
+                clearInterval(lipSyncInterval);
+                
+                if (morphTargets && morphTargets.morphTargetDictionary) {
+                    for (const key in morphTargets.morphTargetDictionary) {
+                        if (key.includes('mouth') || key.includes('viseme')) {
+                            const idx = morphTargets.morphTargetDictionary[key];
+                            morphTargets.morphTargetInfluences[idx] = 0;
+                        }
+                    }
+                }
+            }
+        }
+        
+        // Toggle avatar visibility
+        function toggleAvatar() {
+            console.log("Toggle avatar called, current visibility:", avatarVisible);
+            
+            // Toggle visibility state
+            avatarVisible = !avatarVisible;
+            
+            console.log("Setting avatar visibility to:", avatarVisible);
+            
+            // Set avatar visibility - ensure avatar exists and visibility is properly set
+            if (avatar) {
+                // Force visibility update
+                avatar.visible = avatarVisible;
+                
+                // Force Three.js to update the scene
+                if (avatar.parent) {
+                    avatar.parent.updateMatrixWorld(true);
+                }
+                
+                console.log("Avatar visibility set:", avatar.visible);
+            } else {
+                console.error("Avatar not initialized!");
+                return; // Can't continue without avatar
+            }
+            
+            // Update UI controls
+            const avatarControls = document.querySelector('.avatar-controls');
+            if (avatarControls) {
+                avatarControls.style.display = avatarVisible ? 'flex' : 'none';
+            }
+            
+            // Only run animations and focus if we're showing the avatar
+            if (avatarVisible) {
+                // Make sure the renderer knows to show the avatar
+                if (typeof requestAnimationFrame !== 'undefined') {
+                    requestAnimationFrame(() => {
+                        if (avatar) avatar.visible = true;
+                    });
+                }
+                
+                // Ensure face is in focus
+                setTimeout(() => {
+                    focusOnFace();
+                    playAnimation('nod');
+                }, 100);
+                
+                // Show status for user feedback
+                showStatus("Virtual guide activated", 2000);
+            } else {
+                // Ensure avatar is hidden when toggled off
+                if (typeof requestAnimationFrame !== 'undefined') {
+                    requestAnimationFrame(() => {
+                        if (avatar) avatar.visible = false;
+                    });
+                }
+            }
+        }
+
+        function showAvatar() {
+            console.log("Show avatar called");
+            
+            // If avatar is already visible, just make sure it's focused
+            if (avatarVisible && avatar && avatar.visible) {
+                focusOnFace();
+                return;
+            }
+            
+            // Otherwise explicitly set visibility to true
+            avatarVisible = true;
+            
+            if (avatar) {
+                // Force visibility
+                avatar.visible = true;
+                
+                // Update matrix to ensure rendering
+                avatar.updateMatrix();
+                avatar.updateMatrixWorld(true);
+                
+                // Force re-render
+                if (typeof requestAnimationFrame !== 'undefined') {
+                    requestAnimationFrame(() => {
+                        if (avatar) avatar.visible = true;
+                    });
+                }
+                
+                // Update UI
+                const avatarControls = document.querySelector('.avatar-controls');
+                if (avatarControls) {
+                    avatarControls.style.display = 'flex';
+                }
+                
+                // Make sure face is focused and animation plays
+                setTimeout(() => {
+                    focusOnFace();
+                    playAnimation('nod');
+                }, 100);
+                
+                // Show status
+                showStatus("Virtual guide activated", 2000);
+            } else {
+                console.error("Cannot show avatar - not initialized!");
+            }
+        }
+        function playAnimation(animationName) {
+            console.log("Playing animation:", animationName);
+            
+            if (!avatar) {
+                console.error("Cannot play animation - avatar not initialized");
+                return;
+            }
+            
+            // Make sure avatar is visible before playing animation
+            if (!avatar.visible) {
+                console.warn("Avatar not visible, making visible before animation");
+                avatar.visible = true;
+            }
+            
+            try {
+                switch(animationName) {
+                    case 'nod':
+                        nodAnimation();
+                        break;
+                    default:
+                        console.warn("Unknown animation:", animationName);
+                }
+            } catch (error) {
+                console.error("Error playing animation:", error);
+            }
+        }
+        
+        // Speech Recognition
+        let recognition;
+        function initSpeechRecognition() {
+            if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+                recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+                recognition.lang = "ta-IN"; // Tamil Language
+                recognition.continuous = false;
+                recognition.interimResults = false;
+                
+                recognition.onresult = function (event) {
+                    const userSpeech = event.results[0][0].transcript;
+                    console.log("User said:", userSpeech);
+                    getChatGPTResponse(userSpeech);
+                };
+                
+                recognition.onerror = function (event) {
+                    console.error("Speech recognition error:", event.error);
+                    showStatus("Speech recognition error: " + event.error, 3000);
+                };
+            } else {
+                showStatus("Speech recognition is not supported in this browser.", 3000);
+            }
+        }
+
+        // Start listening
+        function startListening() {
+            if (!recognition) {
+                initSpeechRecognition();
+            }
+            
+            // Focus on face when starting to talk
+            focusOnFace();
+            
+            try { 
+                recognition.start();
+                showStatus("Listening...");
+                console.log("Listening...");
+            } catch (e) {
+                console.error("Speech recognition error:", e);
+                showStatus("Could not start listening: " + e.message, 3000);
+            }
+        }
+
+        // Get response from backend with retry logic
+        async function getChatGPTResponse(userInput) {
+            showStatus("Processing your question...");
+            
+            // Don't start lip sync yet - we'll start it with audio
+            
+            let retryCount = 0;
+            const maxRetries = 2;
+            
+            async function attemptRequest() {
+                let timeoutId = null;
+                
+                try {
+                    let currentLocation = "unknown";
+                    if (pano && pano.getCurrentNode) {
+                        currentLocation = pano.getCurrentNode();
+                    }
+                    
+                    console.log("Sending request to server, attempt:", retryCount + 1);
+                    console.log("User input:", userInput);
+                    console.log("Current location:", currentLocation);
+                    
+                    // IMPORTANT: Remove the AbortController entirely for now
+                    // We'll handle timeouts differently to avoid AbortError issues
+                    
+                    // Set up options for fetch without the abort controller
+                    const fetchOptions = {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({ 
+                            text: userInput,
+                            location: currentLocation
+                        }),
+                        mode: "cors"
+                        // No signal property here
+                    };
+                    
+                    // Use Promise.race to implement our own timeout mechanism
+                    const fetchPromise = fetch("http://127.0.0.1:5005/chat", fetchOptions);
+                    const timeoutPromise = new Promise((_, reject) => {
+                        timeoutId = setTimeout(() => {
+                            console.log("Request timed out after 30 seconds");
+                            reject(new Error("Request timeout after 30 seconds"));
+                        }, 30000); // 30 second timeout
+                    });
+                    
+                    // Race between the fetch and the timeout
+                    const response = await Promise.race([fetchPromise, timeoutPromise]);
+                    
+                    // Clear timeout as soon as we get a response
+                    if (timeoutId) {
+                        clearTimeout(timeoutId);
+                        timeoutId = null;
+                    }
+                    
+                    // Parse response data
+                    const data = await response.json().catch(e => {
+                        console.error("Failed to parse response as JSON:", e);
+                        return { text: "Sorry, I received an invalid response from the server." };
+                    });
+                    
+                    // Handle different error response statuses
+                    if (!response.ok) {
+                        console.error(`Server error ${response.status}:`, data);
+                        
+                        // If we still got some text in the error response, we can use it
+                        if (data.text && data.text.trim() !== "") {
+                            // If we have text from server even in error state, try to use it
+                            console.log("Using text from error response:", data.text);
+                        } else {
+                            // Default error message if no usable text in the error response
+                            data.text = `I'm having trouble processing your request. Please try again later. (Error: ${response.status})`;
+                        }
+                    } else {
+                        console.log("AI response received:", data.text?.substring(0, 50) + "...");
+                    }
+                    
+                    // Process the response whether it was successful or had errors
+                    handleResponse(data);
+                    
+                } catch (error) {
+                    // Make sure to clear any pending timeout
+                    if (timeoutId) {
+                        clearTimeout(timeoutId);
+                        timeoutId = null;
+                    }
+                    
+                    console.error("Error:", error);
+                    
+                    // Specific handling for timeout errors
+                    if (error.message && error.message.includes("timeout")) {
+                        console.log("Request timed out");
+                        showStatus("The server is taking too long to respond...");
+                    }
+                    
+                    // Retry logic
+                    if (retryCount < maxRetries) {
+                        retryCount++;
+                        showStatus(`Connection issue. Retrying (${retryCount}/${maxRetries})...`);
+                        
+                        // Wait a moment before retrying
+                        await new Promise(resolve => setTimeout(resolve, 1000));
+                        return attemptRequest();
+                    }
+                    
+                    // All retries failed
+                    showStatus("Could not connect to the AI guide. Please try again.", 5005);
+                    toggleLipSync(false);
+                    
+                    // Fallback for non-English languages
+                    if (detectLanguage(userInput) === 'ta') {
+                        // Tamil specific message
+                        fallbackToTextResponse("தயவுசெய்து மீண்டும் முயற்சிக்கவும். சேவையகத்துடன் இணைப்பு துண்டிக்கப்பட்டுள்ளது.");
+                    } else {
+                        // Default fallback message
+                        fallbackToTextResponse("I'm having trouble connecting to the server. Please check your connection and try again.");
+                    }
+                }
+            }
+            
+            // Helper function to handle successful responses
+            function handleResponse(data) {
+                // Focus on face before playing response
+                focusOnFace();
+                
+                // Play the audio response if available
+                if (data.audio && data.audio.trim() !== "") {
+                    const audioElement = document.getElementById("speech");
+                    
+                    // Clear previous audio
+                    audioElement.pause();
+                    audioElement.currentTime = 0;
+                    
+                    // Preload audio for faster playback
+                    audioElement.src = data.audio;
+                    audioElement.load();
+                    
+                    // Start lip sync only when audio actually starts playing
+                    audioElement.onloadeddata = function() {
+                        showStatus("Ready to respond...");
+                    };
+                    
+                    audioElement.onplay = function() {
+                        showStatus("AI guide is responding...");
+                        // Start lip sync only when audio actually starts playing
+                        toggleLipSync(true);
+                    };
+                    
+                    audioElement.onended = function() {
+                        toggleLipSync(false);
+                        hideStatus();
+                    };
+                    
+                    // Handle audio play errors
+                    audioElement.onerror = function(e) {
+                        console.error("Audio error:", e);
+                        fallbackToTextResponse(data.text);
+                    };
+                    
+                    // Play audio only after it's loaded
+                    try {
+                        audioElement.play().catch(e => {
+                            console.error("Audio play error:", e);
+                            fallbackToTextResponse(data.text);
+                        });
+                    } catch (e) {
+                        console.error("Audio play error:", e);
+                        fallbackToTextResponse(data.text);
+                    }
+                } else if (data.text) {
+                    // No audio available, use fallback
+                    fallbackToTextResponse(data.text);
+                } else {
+                    hideStatus();
+                    showStatus("I couldn't understand the response. Please try again.", 3000);
+                }
+                
+                // Handle any animations
+                if (data.animations && data.animations.length > 0) {
+                    data.animations.forEach(animation => {
+                        playAnimation(animation);
+                    });
+                }
+            }
+            
+            // Helper function for text response fallback
+            function fallbackToTextResponse(text) {
+                if (!text) return;
+                
+                showStatus("Using text-to-speech fallback...", 2000);
+                
+                // Use browser's text-to-speech if available
+                if (window.speechSynthesis) {
+                    const utterance = new SpeechSynthesisUtterance(text);
+                    
+                    // Check if we have a voice that matches the user's input language
+                    const userLanguage = detectLanguage(userInput);
+                    if (userLanguage) {
+                        const voices = speechSynthesis.getVoices();
+                        const matchingVoice = voices.find(voice => 
+                            voice.lang.startsWith(userLanguage) || 
+                            (userLanguage === 'ta' && voice.lang.startsWith('en')) // Tamil fallback to English
+                        );
+                        if (matchingVoice) {
+                            utterance.voice = matchingVoice;
+                        }
+                    }
+                    
+                    utterance.onstart = function() {
+                        toggleLipSync(true);
+                    };
+                    utterance.onend = function() {
+                        toggleLipSync(false);
+                        hideStatus();
+                    };
+                    speechSynthesis.speak(utterance);
+                } else {
+                    // If text-to-speech is not available, just display the text
+                    showStatus(text, 8000);
+                    hideStatus();
+                }
+            }
+            
+            // Simple language detection based on character sets
+            function detectLanguage(text) {
+                if (!text) return null;
+                
+                // Tamil character range: \u0B80-\u0BFF
+                const tamilRegex = /[\u0B80-\u0BFF]/;
+                if (tamilRegex.test(text)) return 'ta';
+                
+                // Default to English
+                return 'en-US';
+            }
+            
+            // Start the request attempt
+            return attemptRequest();
+        }
+
+        // Initialize speech recognition on page load
+        function handleShowGuideClick() {
+            console.log("Show guide button clicked");
+            
+            // Directly show avatar instead of toggling
+            showAvatar();
+        }
+        
+
+        // Connect the function to your button
+        document.addEventListener('DOMContentLoaded', function() {
+            // Find your button (replace 'show-guide-button' with your actual button ID)
+            const showGuideButton = document.getElementById('show-guide-button');
+            
+            if (showGuideButton) {
+                console.log("Show guide button found, adding event listener");
+                showGuideButton.addEventListener('click', handleShowGuideClick);
+            } else {
+                console.warn("Show guide button not found - check the ID");
+            }
+        });
+    </script>
+</body>
+</html>

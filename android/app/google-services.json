@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "525824332501",
+    "project_id": "heritaxpayanam",
+    "storage_bucket": "heritaxpayanam.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525824332501:android:3fcee803aad758d8edc85c",
+        "android_client_info": {
+          "package_name": "com.example.heritax"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIvKIJBmGG4_vgg3ietOIbrPE9OhyC4bY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
